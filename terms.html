@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | chinapartnerhub.com</title>
+    <meta name="description" content="Terms of Service for chinapartnerhub.com. Our sourcing service terms, liability, and client agreements.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://chinapartnerhub.com/terms.html">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+    <div class="container">
+        <a href="index.html" class="nav-logo"><img src="logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
+        <ul class="nav-links">
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="services.html">Services & Pricing</a></li>
+            <li><a href="verified-suppliers.html">Verified Suppliers</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="insights/">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="how-it-works.html">How It Works</a><a href="services.html">Services & Pricing</a><a href="verified-suppliers.html">Verified Suppliers</a><a href="about.html">About</a><a href="insights/">Insights</a><a href="contact.html">Contact</a>
+</div>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h1>Terms of Service</h1>
+        <p style="color:var(--color-gray-500);margin-bottom:2rem;">Last updated: 2026</p>
+        <div style="line-height:1.9;color:var(--color-gray-700);">
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">1. Services</h2>
+            <p>ChinaPartnerHub provides China sourcing services including factory search, supplier verification, production management, quality inspection, and shipping coordination. Service details and pricing are outlined on our Services page and in individual client agreements.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">2. Pricing & Payment</h2>
+            <p>Our commission rates are transparent: 8% for full-service sourcing, 5% for production management only, and free for basic supplier verification. Minimum fee of $100 applies. Clients pay factories directly; our commission is invoiced separately. We recommend staged payments (30/40/30) via PayPal, Wise, Alipay, or bank transfer.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">3. No Factory Price Markup</h2>
+            <p>We do not mark up factory prices. Clients see the exact factory quote and pay the factory directly. Our commission is transparent and separate from the product cost.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">4. Limitation of Liability</h2>
+            <p>We act as a sourcing partner and advisor. While we exercise due diligence in factory verification and production management, we are not the manufacturer. The factory is responsible for product quality and delivery. Our liability is limited to the amount of our service fee.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">5. Client Responsibilities</h2>
+            <p>Clients are responsible for providing accurate product specifications, timely approvals, and payment according to the agreed schedule. Delays caused by client actions may affect production timelines.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">6. Confidentiality</h2>
+            <p>We treat all client information, product designs, and supplier relationships as confidential. We do not share client-specific information with other clients or third parties without permission.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">7. Dispute Resolution</h2>
+            <p>Any disputes will first be addressed through direct communication. If unresolved, disputes shall be handled under the laws of the People's Republic of China.</p>
+            <h2 style="font-size:1.3rem;margin:2rem 0 1rem;">8. Contact</h2>
+            <p>For questions about these terms: info@chinapartnerhub.com</p>
+        </div>
+    </div>
+</section>
+
+<footer style="background:var(--color-navy);color:#D1D5DB;padding:3rem 0 2rem;text-align:center;font-size:0.8rem;">
+    <p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;margin-top:0.75rem;"><a href="privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="terms.html" style="opacity:0.6;">Terms of Service</a></div>
+</footer>
+
+<script>
+const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
+navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
+mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
+</script>
+</body>
+</html>
