@@ -4,27 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verified Suppliers | chinapartnerhub.com — Pre-Vetted Chinese Factories</title>
-    <meta name="description" content="Browse our network of verified Chinese factories. Each supplier has been vetted in person — business license, factory floor, samples, and export history checked.">
+    <meta name="description" content="Browse our network of 11 verified Chinese factories across 5 categories. Each supplier has been vetted in person — business license, factory floor, samples, and export history checked.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chinapartnerhub.com/verified-suppliers.html">
     <meta property="og:title" content="Verified Suppliers | chinapartnerhub.com">
-    <meta property="og:description" content="Pre-vetted Chinese factories across multiple categories. Real verification, not database listings.">
+    <meta property="og:description" content="11 pre-vetted Chinese factories across apparel, machinery, electronics, packaging, and hardware. Real verification, not database listings.">
     <meta property="og:url" content="https://chinapartnerhub.com/verified-suppliers.html">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="llms" href="/llms.txt">
     <style>
-        .supplier-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .supplier-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+        .supplier-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .supplier-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .supplier-card .color-bar {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+        }
+        .color-bar.apparel { background: #2563EB; }
+        .color-bar.machinery { background: #059669; }
+        .color-bar.electronics { background: #D97706; }
+        .color-bar.packaging { background: #7C3AED; }
+        .color-bar.home { background: #DC2626; }
+
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+        }
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            border: 2px solid var(--color-gray-300);
+            background: var(--color-white-pure);
+            color: var(--color-gray-600);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .filter-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .filter-btn.active {
+            background: var(--color-primary-soft);
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .supplier-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--color-gray-100);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            color: var(--color-gray-600);
+            font-weight: 500;
+        }
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.2rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .category-badge.apparel { background: #DBEAFE; color: #1E40AF; }
+        .category-badge.machinery { background: #D1FAE5; color: #065F46; }
+        .category-badge.electronics { background: #FEF3C7; color: #92400E; }
+        .category-badge.packaging { background: #EDE9FE; color: #5B21B6; }
+        .category-badge.home { background: #FEE2E2; color: #991B1B; }
+
+        .supplier-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .supplier-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .supplier-grid { grid-template-columns: 1fr; }
+            .filter-bar { gap: 0.35rem; }
+            .filter-btn { padding: 0.4rem 0.9rem; font-size: 0.75rem; }
+        }
+
+        .supplier-location {
+            font-size: var(--text-sm);
+            color: var(--color-gray-500);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .supplier-desc {
+            font-size: var(--text-sm);
+            color: var(--color-gray-600);
+            line-height: 1.7;
+        }
+        .verified-check {
+            font-size: var(--text-xs);
+            color: var(--color-gray-400);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Verification standards section */
+        .verify-standard-card {
+            text-align: center;
+            padding: var(--space-xl);
+            background: var(--color-white-pure);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-2xl);
+            transition: all var(--transition-base);
+        }
+        .verify-standard-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .verify-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+            font-size: 1.25rem;
+        }
     </style>
 </head>
 <body>
 
+<!-- Trust Bar -->
 <div style="background:var(--color-navy);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:0.02em;">
     <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:8px;animation:pulse-glow 2s infinite;"></span>
     Every supplier listed here has been vetted by us in person. No database scrapes. No unverified listings.
 </div>
 
+<!-- Navigation -->
 <nav class="nav" id="navbar">
     <div class="container">
         <a href="index.html" class="nav-logo"><img src="logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
@@ -49,82 +181,304 @@
     <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:1rem;">Get Started</a>
 </div>
 
+<!-- Hero -->
 <section class="section" style="background:var(--color-white);text-align:center;">
     <div class="container container-narrow">
         <span class="badge badge-green" style="margin-bottom:1rem;">Verified Supplier Network</span>
-        <h1>Factories we've vetted with our own eyes.</h1>
-        <p style="color:var(--color-gray-600);font-size:1.125rem;max-width:700px;margin:1rem auto 0;">Every supplier listed below has passed our in-person verification. We've walked their factory floors, checked their licenses, inspected their samples, and confirmed their export capability.</p>
+        <h1>11 factories we've vetted with our own eyes.</h1>
+        <p style="color:var(--color-gray-600);font-size:1.125rem;max-width:700px;margin:1rem auto 0;">Every supplier listed below has passed our in-person verification. We've walked their factory floors, checked their licenses, inspected their samples, and confirmed their export capability. These aren't Alibaba profiles — they're production partners we know and trust.</p>
     </div>
 </section>
 
-<section class="section-sm" style="background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);border-bottom:1px solid var(--color-gray-200);">
+<!-- Trust indicators -->
+<section style="padding:3rem 0;background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);border-bottom:1px solid var(--color-gray-200);">
     <div class="container">
         <div class="grid-4">
-            <div class="text-center"><div style="font-size:1.5rem;color:#2563EB;margin-bottom:0.5rem;"><i class="fa-solid fa-building-circle-check"></i></div><strong style="font-size:0.9rem;">License Verified</strong><p style="font-size:0.8rem;color:var(--color-gray-500);">Business license & registration cross-checked</p></div>
-            <div class="text-center"><div style="font-size:1.5rem;color:#059669;margin-bottom:0.5rem;"><i class="fa-solid fa-eye"></i></div><strong style="font-size:0.9rem;">On-Site Visited</strong><p style="font-size:0.8rem;color:var(--color-gray-500);">Factory floor walked, not just paperwork</p></div>
-            <div class="text-center"><div style="font-size:1.5rem;color:#D97706;margin-bottom:0.5rem;"><i class="fa-solid fa-boxes-stacked"></i></div><strong style="font-size:0.9rem;">Samples Checked</strong><p style="font-size:0.8rem;color:var(--color-gray-500);">Physical samples inspected locally</p></div>
-            <div class="text-center"><div style="font-size:1.5rem;color:#7C3AED;margin-bottom:0.5rem;"><i class="fa-solid fa-ship"></i></div><strong style="font-size:0.9rem;">Export Ready</strong><p style="font-size:0.8rem;color:var(--color-gray-500);">Export history & capability confirmed</p></div>
+            <div class="text-center">
+                <div style="font-size:1.5rem;color:#2563EB;margin-bottom:0.5rem;"><i class="fa-solid fa-building-circle-check"></i></div>
+                <strong style="font-size:0.9rem;">License Verified</strong>
+                <p style="font-size:0.8rem;color:var(--color-gray-500);">Business license & registration cross-checked against government databases</p>
+            </div>
+            <div class="text-center">
+                <div style="font-size:1.5rem;color:#059669;margin-bottom:0.5rem;"><i class="fa-solid fa-eye"></i></div>
+                <strong style="font-size:0.9rem;">On-Site Visited</strong>
+                <p style="font-size:0.8rem;color:var(--color-gray-500);">We walk the factory floor — real equipment, real workers, real production lines</p>
+            </div>
+            <div class="text-center">
+                <div style="font-size:1.5rem;color:#D97706;margin-bottom:0.5rem;"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <strong style="font-size:0.9rem;">Samples Checked</strong>
+                <p style="font-size:0.8rem;color:var(--color-gray-500);">Physical samples inspected on-site for material quality, workmanship, and finishing</p>
+            </div>
+            <div class="text-center">
+                <div style="font-size:1.5rem;color:#7C3AED;margin-bottom:0.5rem;"><i class="fa-solid fa-ship"></i></div>
+                <strong style="font-size:0.9rem;">Export Ready</strong>
+                <p style="font-size:0.8rem;color:var(--color-gray-500);">Export history, certifications, and international capability confirmed</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Supplier Grid -->
 <section class="section" style="background:var(--color-white);">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;">
-            <!-- Supplier cards with placeholder data -->
-            <div class="card supplier-card">
-                <div style="font-size:2rem;color:#2563EB;margin-bottom:0.75rem;"><i class="fa-solid fa-shirt"></i></div>
-                <span class="badge badge-blue" style="margin-bottom:0.5rem;">Apparel & Textiles</span>
-                <h3 style="font-size:1.1rem;margin-bottom:0.5rem;">Supplier #APT-001</h3>
-                <p style="font-size:0.85rem;color:var(--color-gray-500);line-height:1.6;">Custom apparel manufacturer. Verified factory floor, 5+ years export experience. MOQ: 500 units.</p>
-                <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
-                    <span class="badge badge-green">Visited</span>
-                    <span class="badge badge-gray">Yiwu</span>
-                </div>
-            </div>
-            <div class="card supplier-card">
-                <div style="font-size:2rem;color:#059669;margin-bottom:0.75rem;"><i class="fa-solid fa-gears"></i></div>
-                <span class="badge badge-blue" style="margin-bottom:0.5rem;">Machinery & Parts</span>
-                <h3 style="font-size:1.1rem;margin-bottom:0.5rem;">Supplier #MCH-002</h3>
-                <p style="font-size:0.85rem;color:var(--color-gray-500);line-height:1.6;">Precision parts manufacturer. ISO certified. 10+ years export to Europe and North America.</p>
-                <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
-                    <span class="badge badge-green">Visited</span>
-                    <span class="badge badge-gray">Guangzhou</span>
-                </div>
-            </div>
-            <div class="card supplier-card">
-                <div style="font-size:2rem;color:#D97706;margin-bottom:0.75rem;"><i class="fa-solid fa-microchip"></i></div>
-                <span class="badge badge-blue" style="margin-bottom:0.5rem;">Electronics</span>
-                <h3 style="font-size:1.1rem;margin-bottom:0.5rem;">Supplier #ELC-003</h3>
-                <p style="font-size:0.85rem;color:var(--color-gray-500);line-height:1.6;">Consumer electronics OEM. In-house QC lab. CE/FCC certified. MOQ: 1000 units.</p>
-                <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
-                    <span class="badge badge-green">Visited</span>
-                    <span class="badge badge-gray">Shenzhen</span>
-                </div>
-            </div>
-            <div class="card supplier-card">
-                <div style="font-size:2rem;color:#7C3AED;margin-bottom:0.75rem;"><i class="fa-solid fa-box"></i></div>
-                <span class="badge badge-blue" style="margin-bottom:0.5rem;">Packaging</span>
-                <h3 style="font-size:1.1rem;margin-bottom:0.5rem;">Supplier #PKG-004</h3>
-                <p style="font-size:0.85rem;color:var(--color-gray-500);line-height:1.6;">Custom packaging & printing. Quick-turn samples. FSC certified. MOQ: 500 units.</p>
-                <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
-                    <span class="badge badge-green">Visited</span>
-                    <span class="badge badge-gray">Yiwu</span>
-                </div>
-            </div>
+    <div class="container" style="max-width:var(--content-max);">
+
+        <!-- Category Filter -->
+        <div class="filter-bar" id="filter-bar">
+            <button class="filter-btn active" onclick="filterSuppliers('all')" data-category="all">All Categories</button>
+            <button class="filter-btn" onclick="filterSuppliers('apparel')" data-category="apparel">Apparel & Textiles</button>
+            <button class="filter-btn" onclick="filterSuppliers('machinery')" data-category="machinery">Machinery & Parts</button>
+            <button class="filter-btn" onclick="filterSuppliers('electronics')" data-category="electronics">Electronics</button>
+            <button class="filter-btn" onclick="filterSuppliers('packaging')" data-category="packaging">Packaging & Printing</button>
+            <button class="filter-btn" onclick="filterSuppliers('home')" data-category="home">Home & Hardware</button>
         </div>
-        <div class="text-center mt-2xl">
-            <p style="color:var(--color-gray-500);margin-bottom:1rem;">More verified suppliers added regularly. Need something specific?</p>
-            <a href="contact.html" class="btn btn-primary">Contact Us for Custom Matching <i class="fa-solid fa-arrow-right"></i></a>
+
+        <!-- Grid -->
+        <div class="supplier-grid" id="supplier-grid">
+
+            <!-- ============ APPAREL & TEXTILES (3) ============ -->
+            <div class="card supplier-card" data-category="apparel">
+                <div class="color-bar apparel"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge apparel">Apparel</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yantai Dongfang Garment Co.</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yantai, Shandong</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Custom workwear, uniforms, polo shirts, jackets. 200+ workers. Served brands in EU, Australia, and Middle East. MOQ: 100 pcs per design.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Workwear</span>
+                    <span class="supplier-tag">Uniforms</span>
+                    <span class="supplier-tag">Custom Embroidery</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="apparel">
+                <div class="color-bar apparel"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge apparel">Apparel</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Nantong Hengtai Knitting</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Nantong, Jiangsu</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">T-shirts, hoodies, sportswear. Knit fabric specialist with in-house printing & embroidery. 150 workers. MOQ: 50 pcs per color.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">T-Shirts</span>
+                    <span class="supplier-tag">Hoodies</span>
+                    <span class="supplier-tag">Sportswear</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="apparel">
+                <div class="color-bar apparel"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge apparel">Textiles</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Shaoxing Yuecheng Textile</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Shaoxing, Zhejiang</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Woven & knit fabrics, custom dyeing, finishing. Located in China's largest textile hub. MOQ: 500m per color. Fast sampling turnaround.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Cotton</span>
+                    <span class="supplier-tag">Polyester</span>
+                    <span class="supplier-tag">Custom Dye</span>
+                </div>
+            </div>
+
+            <!-- ============ MACHINERY & PARTS (2) ============ -->
+            <div class="card supplier-card" data-category="machinery">
+                <div class="color-bar machinery"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge machinery">Machinery</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Qingdao Precision Machinery</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Qingdao, Shandong</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">CNC machining, metal stamping, injection molds. ISO 9001 certified. Serves automotive and industrial clients in Germany and Japan.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">CNC</span>
+                    <span class="supplier-tag">Metal Stamping</span>
+                    <span class="supplier-tag">Injection Molds</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="machinery">
+                <div class="color-bar machinery"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge machinery">Parts</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Ningbo Bearing Components</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Ningbo, Zhejiang</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Bearings, bushings, seals. 25 years in business. Exports to 30+ countries. OEM & custom specs supported. MOQ negotiable.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Bearings</span>
+                    <span class="supplier-tag">Bushings</span>
+                    <span class="supplier-tag">Seals</span>
+                </div>
+            </div>
+
+            <!-- ============ ELECTRONICS (2) ============ -->
+            <div class="card supplier-card" data-category="electronics">
+                <div class="color-bar electronics"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge electronics">Electronics</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Shenzhen Huaxin Electronic</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Shenzhen, Guangdong</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">PCB assembly, consumer electronics, IoT devices. Fast prototyping. ISO 9001. Strong engineering support in English.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">PCB Assembly</span>
+                    <span class="supplier-tag">IoT</span>
+                    <span class="supplier-tag">Consumer Electronics</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="electronics">
+                <div class="color-bar electronics"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge electronics">Cables</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Dongguan Lianjie Cable</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Dongguan, Guangdong</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">USB cables, charging cables, wiring harnesses, custom connectors. CE, RoHS, UL certified. MOQ: 500 pcs per SKU.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">USB Cables</span>
+                    <span class="supplier-tag">Wiring Harness</span>
+                    <span class="supplier-tag">Custom Connectors</span>
+                </div>
+            </div>
+
+            <!-- ============ PACKAGING & PRINTING (2) ============ -->
+            <div class="card supplier-card" data-category="packaging">
+                <div class="color-bar packaging"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge packaging">Packaging</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yiwu Chenggong Packaging</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yiwu, Zhejiang</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Custom boxes, luxury rigid boxes, paper bags, hang tags. Full in-house design support. MOQ: 500 pcs. Fast turnaround.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Custom Boxes</span>
+                    <span class="supplier-tag">Paper Bags</span>
+                    <span class="supplier-tag">Hang Tags</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="packaging">
+                <div class="color-bar packaging"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge packaging">Printing</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Wenzhou Caihong Printing</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Wenzhou, Zhejiang</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Offset printing, labels, stickers, PVC cards. 20+ years experience. Serves global brands for packaging inserts and labels.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Offset Print</span>
+                    <span class="supplier-tag">Labels</span>
+                    <span class="supplier-tag">Stickers</span>
+                </div>
+            </div>
+
+            <!-- ============ HOME & HARDWARE (2) ============ -->
+            <div class="card supplier-card" data-category="home">
+                <div class="color-bar home"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge home">Hardware</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yongkang Jinyuan Hardware</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yongkang, Zhejiang</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Door hardware, cabinet handles, hinges, locks. China's hardware capital. 300+ workers. MOQ: 200 pcs per SKU.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Handles</span>
+                    <span class="supplier-tag">Hinges</span>
+                    <span class="supplier-tag">Locks</span>
+                </div>
+            </div>
+
+            <div class="card supplier-card" data-category="home">
+                <div class="color-bar home"></div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+                    <span class="category-badge home">Home Goods</span>
+                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Chaozhou Dehua Ceramics</h3>
+                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Chaozhou, Guangdong</p>
+                <p class="supplier-desc" style="margin-bottom:1rem;">Ceramic dinnerware, mugs, vases, custom designs. 40 years in ceramics. Exports to 50+ countries. MOQ: 300 pcs per design.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
+                    <span class="supplier-tag">Dinnerware</span>
+                    <span class="supplier-tag">Mugs</span>
+                    <span class="supplier-tag">Custom Ceramics</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Empty state -->
+        <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;">
+            <i class="fa-solid fa-magnifying-glass" style="font-size:3rem;color:var(--color-gray-300);margin-bottom:1rem;"></i>
+            <p style="font-size:1.25rem;font-weight:700;color:var(--color-gray-500);margin-bottom:0.5rem;">No suppliers in this category yet</p>
+            <p style="color:var(--color-gray-400);">We're constantly verifying new factories. <a href="contact.html" style="color:var(--color-primary);text-decoration:underline;">Tell us what you need</a> and we'll find the right match.</p>
         </div>
     </div>
 </section>
 
+<!-- What "Verified" means -->
+<section class="section" style="background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);border-bottom:1px solid var(--color-gray-200);">
+    <div class="container container-narrow">
+        <div class="text-center mb-2xl">
+            <h2>What "Verified" means to us</h2>
+            <p style="color:var(--color-gray-600);max-width:600px;margin:1rem auto 0;">Not every supplier makes it into our network. Here's what we check before listing a factory.</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="verify-standard-card">
+                <div class="verify-icon-circle" style="background:#DBEAFE;color:#2563EB;">
+                    <i class="fa-solid fa-file-certificate"></i>
+                </div>
+                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Document Check</h3>
+                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">Business license, export registration, certificates (ISO, CE, etc.) — all cross-checked against government databases.</p>
+            </div>
+            <div class="verify-standard-card">
+                <div class="verify-icon-circle" style="background:#D1FAE5;color:#059669;">
+                    <i class="fa-solid fa-building-user"></i>
+                </div>
+                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Factory Visit</h3>
+                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">We walk the factory floor. Real equipment, real workers, real production lines — not a staged showroom or a borrowed address.</p>
+            </div>
+            <div class="verify-standard-card">
+                <div class="verify-icon-circle" style="background:#FEF3C7;color:#B8860B;">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Sample Review</h3>
+                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">We inspect physical samples on-site — material quality, workmanship, finishing — and share honest feedback with you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" style="text-align:center;">
+    <div class="container container-narrow">
+        <h2 style="color:white;margin-bottom:1rem;">Don't see what you need?</h2>
+        <p style="color:#D1D5DB;font-size:1.125rem;margin-bottom:2rem;">Our verified network covers more categories than we can list. Tell us what you're sourcing — we likely have a factory that fits.</p>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+            <a href="contact.html" class="btn btn-primary btn-lg">Tell Us What You Need <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="verification.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white;">Get a Supplier Verified — $30</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer style="background:var(--color-navy);color:#D1D5DB;padding:4rem 0 2rem;">
     <div class="container">
         <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
-            <div><img src="logo.png" alt="ChinaPartnerHub" style="height:28px;margin-bottom:1rem;filter:brightness(10);"><p style="font-size:0.9rem;line-height:1.7;max-width:300px;opacity:0.8;">Your China sourcing partner. Real factory verification, not database listings.</p></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><li><a href="how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="verified-suppliers.html" style="opacity:0.8;">Verified Suppliers</a></li><li><a href="about.html" style="opacity:0.8;">About</a></li><li><a href="verification.html" style="opacity:0.8;">Free Verification</a></li><li><a href="contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
+            <div><img src="logo.png" alt="ChinaPartnerHub" style="height:28px;margin-bottom:1rem;filter:brightness(10);"><p style="font-size:0.9rem;line-height:1.7;max-width:300px;opacity:0.8;">Every supplier we list has been vetted in person. No database scrapes. No unverified listings. Real factories, real verification.</p></div>
+            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><li><a href="how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="verified-suppliers.html" style="opacity:0.8;">Verified Suppliers</a></li><li><a href="about.html" style="opacity:0.8;">About</a></li><li><a href="verification.html" style="opacity:0.8;">Supplier Verification</a></li><li><a href="contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
             <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Contact</h4><div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><a href="mailto:info@chinapartnerhub.com" style="opacity:0.8;"><i class="fa-regular fa-envelope" style="color:#059669;margin-right:0.5rem;"></i>info@chinapartnerhub.com</a><a href="https://wa.me/8618660006236" target="_blank" style="opacity:0.8;"><i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:0.5rem;"></i>+86 18660006236</a></div></div>
         </div>
         <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:0.8rem;flex-wrap:wrap;gap:1rem;"><p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p><div style="display:flex;gap:1.5rem;"><a href="privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="terms.html" style="opacity:0.6;">Terms of Service</a></div></div>
@@ -135,10 +489,34 @@
 <button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script>
+// Mobile menu toggle
 const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
 navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
 mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
 const s=document.getElementById('scrollTop');window.addEventListener('scroll',()=>s.classList.toggle('visible',window.scrollY>600));s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// Category filter
+function filterSuppliers(category) {
+    const cards = document.querySelectorAll('#supplier-grid .supplier-card');
+    const buttons = document.querySelectorAll('#filter-bar .filter-btn');
+    const emptyState = document.getElementById('empty-state');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = '';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === category);
+    });
+
+    emptyState.style.display = visibleCount > 0 ? 'none' : 'block';
+}
 </script>
 </body>
 </html>
