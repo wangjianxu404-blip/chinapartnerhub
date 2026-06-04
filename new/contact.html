@@ -255,7 +255,7 @@
                     <div class="flex items-center justify-between gap-4">
                         <div>
                         <p class="eyebrow text-teal-800">Leave a message</p>
-                            <h2 class="mt-4 text-3xl font-bold text-slate-950">Tell us who you are, what you want to source, and what decision you need help with.</h2>
+                            <h2 class="mt-4 text-3xl font-bold text-slate-950">Tell us what you can. A short message is enough to start.</h2>
                         </div>
                         <span class="rounded-full bg-[rgba(12,124,120,0.08)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Structured intake</span>
                     </div>
@@ -265,12 +265,12 @@
                         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name *</label>
-                                <input id="name" type="text" name="name" required class="form-input" placeholder="How should we address you?">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name</label>
+                                <input id="name" type="text" name="name" class="form-input" placeholder="How should we address you?">
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address *</label>
-                                <input id="email" type="email" name="email" required class="form-input" placeholder="How can we reach you?">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address</label>
+                                <input id="email" type="email" name="email" class="form-input" placeholder="Email, or leave this blank if you prefer WhatsApp.">
                             </div>
                         </div>
                         <div class="grid gap-5 md:grid-cols-2">
@@ -279,9 +279,9 @@
                                 <input id="business_name" type="text" name="business_name" class="form-input" placeholder="What is your company, brand, or store name?">
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="service_interest">What do you need most? *</label>
-                                <select id="service_interest" name="service_interest" required class="form-select">
-                                    <option value="">Choose one</option>
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="service_interest">What do you need most?</label>
+                                <select id="service_interest" name="service_interest" class="form-select">
+                                    <option value="">Choose one if you know</option>
                                     <option value="supplier-verification">Supplier verification</option>
                                     <option value="factory-search">Factory search</option>
                                     <option value="sample-review">Sample review</option>
@@ -293,8 +293,8 @@
                         </div>
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="product_category">What do you want to source? *</label>
-                                <input id="product_category" type="text" name="product_category" required class="form-input" placeholder="Product type, quantity, and main requirements">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="product_category">What do you want to source?</label>
+                                <input id="product_category" type="text" name="product_category" class="form-input" placeholder="Product type, quantity, or main requirement if you know it">
                             </div>
                             <div>
                                 <label class="mb-2 block text-sm font-bold text-slate-700" for="order_stage">Current Stage</label>
@@ -303,10 +303,10 @@
                         </div>
                         <div>
                             <label class="mb-2 block text-sm font-bold text-slate-700" for="message">More Details</label>
-                            <textarea id="message" name="message" rows="6" required class="form-input" placeholder="Tell us your specific needs, budget range, timeline, supplier situation, or any question you want us to check."></textarea>
+                            <textarea id="message" name="message" rows="6" class="form-input" placeholder="Tell us your specific needs, budget range, timeline, supplier situation, or any question you want us to check."></textarea>
                         </div>
                         <div class="rounded-[1.4rem] border section-line bg-[rgba(12,124,120,0.05)] p-5 text-sm leading-7 text-slate-600">
-                            Keep the first message simple. A useful brief can be your product, quantity target, supplier link if you have one, and the main decision you need help with.
+                            Keep the first message simple. You can submit even if some fields are blank. A useful brief can be your product, quantity target, supplier link if you have one, and the main decision you need help with.
                         </div>
                         <button type="submit" class="cta-main w-full rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Send Message</button>
                     </form>

@@ -228,38 +228,38 @@
                 <div id="verification-form" class="rounded-[2rem] border section-line bg-white p-8 shadow-float md:p-10">
                     <p class="eyebrow text-teal-800">Verification form</p>
                     <h2 class="mt-4 text-3xl font-bold text-slate-950">Send a supplier to review</h2>
-                    <p class="mt-4 text-base leading-7 text-slate-600">Fill in what you have. Even partial information is enough to start. After payment and form submission, the request can be routed into a written verification response.</p>
+                    <p class="mt-4 text-base leading-7 text-slate-600">Fill in what you have. Even partial information is enough to start, and blank fields will not block submission. After payment and form submission, the request can be routed into a written verification response.</p>
                     <form action="https://formspree.io/f/mpqownpa" method="POST" class="mt-8 grid gap-5">
                         <input type="hidden" name="form_type" value="supplier_verification_39usd">
                         <input type="hidden" name="_subject" value="China Partner Hub - $39 Supplier Verification">
                         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name *</label>
-                                <input id="name" type="text" name="name" required class="form-input" placeholder="Your full name">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name</label>
+                                <input id="name" type="text" name="name" class="form-input" placeholder="Your full name">
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address *</label>
-                                <input id="email" type="email" name="email" required class="form-input" placeholder="Your email address">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address</label>
+                                <input id="email" type="email" name="email" class="form-input" placeholder="Email, or leave this blank if you prefer WhatsApp.">
                             </div>
                         </div>
                         <div>
-                            <label class="mb-2 block text-sm font-bold text-slate-700" for="supplier_name">Supplier Name *</label>
-                            <input id="supplier_name" type="text" name="supplier_name" required class="form-input" placeholder="Factory or company name">
+                            <label class="mb-2 block text-sm font-bold text-slate-700" for="supplier_name">Supplier Name</label>
+                            <input id="supplier_name" type="text" name="supplier_name" class="form-input" placeholder="Factory or company name">
                         </div>
                         <div>
-                            <label class="mb-2 block text-sm font-bold text-slate-700" for="supplier_link">Supplier Link or Contact *</label>
-                            <input id="supplier_link" type="text" name="supplier_link" required class="form-input" placeholder="Alibaba link, website, email, or WhatsApp">
+                            <label class="mb-2 block text-sm font-bold text-slate-700" for="supplier_link">Supplier Link or Contact</label>
+                            <input id="supplier_link" type="text" name="supplier_link" class="form-input" placeholder="Alibaba link, website, email, or WhatsApp">
                         </div>
                         <div>
-                            <label class="mb-2 block text-sm font-bold text-slate-700" for="product">Product or Category *</label>
-                            <input id="product" type="text" name="product" required class="form-input" placeholder="What are you sourcing?">
+                            <label class="mb-2 block text-sm font-bold text-slate-700" for="product">Product or Category</label>
+                            <input id="product" type="text" name="product" class="form-input" placeholder="What are you sourcing?">
                         </div>
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="current_stage">Current Stage *</label>
-                                <select id="current_stage" name="current_stage" required class="form-select">
-                                    <option value="">Choose one</option>
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="current_stage">Current Stage</label>
+                                <select id="current_stage" name="current_stage" class="form-select">
+                                    <option value="">Choose one if you know</option>
                                     <option value="checking legitimacy before deposit">Checking legitimacy before deposit</option>
                                     <option value="comparing two or more suppliers">Comparing two or more suppliers</option>
                                     <option value="already negotiating and need a second read">Already negotiating and need a second read</option>
@@ -267,20 +267,20 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="available_materials">Materials Available *</label>
-                                <input id="available_materials" type="text" name="available_materials" required class="form-input" placeholder="Link, catalog PDF, quote sheet, screenshots, video, sample photos">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="available_materials">Materials Available</label>
+                                <input id="available_materials" type="text" name="available_materials" class="form-input" placeholder="Link, catalog PDF, quote sheet, screenshots, video, sample photos">
                             </div>
                         </div>
                         <div>
-                            <label class="mb-2 block text-sm font-bold text-slate-700" for="main_concern">Main Concern *</label>
-                            <input id="main_concern" type="text" name="main_concern" required class="form-input" placeholder="Factory or trader, price too low, category fit, payment risk, sample credibility">
+                            <label class="mb-2 block text-sm font-bold text-slate-700" for="main_concern">Main Concern</label>
+                            <input id="main_concern" type="text" name="main_concern" class="form-input" placeholder="Factory or trader, price too low, category fit, payment risk, sample credibility">
                         </div>
                         <div>
                             <label class="mb-2 block text-sm font-bold text-slate-700" for="message">Notes</label>
                             <textarea id="message" name="message" rows="5" class="form-input" placeholder="MOQ, timeline, price concerns, supplier claims, or anything else that helps assess the supplier."></textarea>
                         </div>
                         <div class="rounded-[1.4rem] border section-line bg-[rgba(12,124,120,0.05)] p-5 text-sm leading-7 text-slate-600">
-                            Please complete payment before or immediately after submission. Include the supplier link, your main concern, and the materials you already have so the review can start without extra back-and-forth. Files can be sent by email or WhatsApp after the form is submitted.
+                            Please complete payment before or immediately after submission. Submit what you already know; missing details can be sent later by email or WhatsApp. A supplier link, main concern, and available materials help the review start faster, but blank fields will not block the form.
                         </div>
                         <button type="submit" class="cta-main w-full rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Submit and start $39 verification</button>
                     </form>
@@ -322,4 +322,3 @@
     </footer>
 </body>
 </html>
-

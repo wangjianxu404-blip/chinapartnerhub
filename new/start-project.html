@@ -262,20 +262,20 @@
 
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name *</label>
-                                <input id="name" type="text" name="name" required class="form-input" placeholder="Your full name">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="name">Your Name</label>
+                                <input id="name" type="text" name="name" class="form-input" placeholder="Your full name">
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address *</label>
-                                <input id="email" type="email" name="email" required class="form-input" placeholder="Your email address">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="email">Email Address</label>
+                                <input id="email" type="email" name="email" class="form-input" placeholder="Email, or leave this blank if you prefer WhatsApp.">
                             </div>
                         </div>
 
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="service_interest">Primary Support Needed *</label>
-                                <select id="service_interest" name="service_interest" required class="form-select">
-                                    <option value="">Choose one</option>
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="service_interest">Primary Support Needed</label>
+                                <select id="service_interest" name="service_interest" class="form-select">
+                                    <option value="">Choose one if you know</option>
                                     <option value="full-sourcing">Full sourcing partnership</option>
                                     <option value="supplier-verification">$39 supplier verification</option>
                                     <option value="sourcing-discovery">$39 sourcing discovery</option>
@@ -285,16 +285,16 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="product_category">Product or Category *</label>
-                                <input id="product_category" type="text" name="product_category" required class="form-input" placeholder="Any product category: apparel, machinery, plastics, electronics, furniture, etc.">
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="product_category">Product or Category</label>
+                                <input id="product_category" type="text" name="product_category" class="form-input" placeholder="Any product category: apparel, machinery, plastics, electronics, furniture, etc.">
                             </div>
                         </div>
 
                         <div class="grid gap-5 md:grid-cols-2">
                             <div>
-                                <label class="mb-2 block text-sm font-bold text-slate-700" for="order_stage">Current Stage *</label>
-                                <select id="order_stage" name="order_stage" required class="form-select">
-                                    <option value="">Choose one</option>
+                                <label class="mb-2 block text-sm font-bold text-slate-700" for="order_stage">Current Stage</label>
+                                <select id="order_stage" name="order_stage" class="form-select">
+                                    <option value="">Choose one if you know</option>
                                     <option value="idea-stage">Still shaping the product</option>
                                     <option value="comparing-suppliers">Comparing suppliers</option>
                                     <option value="sample-stage">In sampling</option>
@@ -310,8 +310,8 @@
                         </div>
 
                         <div>
-                            <label class="mb-2 block text-sm font-bold text-slate-700" for="main_risk">Main Decision or Risk *</label>
-                            <textarea id="main_risk" name="main_risk" rows="4" required class="form-input" placeholder="What do you need help deciding now? Supplier legitimacy, quote gap, sample quality, production delay, shipment readiness, or another issue."></textarea>
+                            <label class="mb-2 block text-sm font-bold text-slate-700" for="main_risk">Main Decision or Risk</label>
+                            <textarea id="main_risk" name="main_risk" rows="4" class="form-input" placeholder="What do you need help deciding now? Supplier legitimacy, quote gap, sample quality, production delay, shipment readiness, or another issue."></textarea>
                         </div>
 
                         <div>
@@ -320,7 +320,7 @@
                         </div>
 
                         <div class="rounded-[1.4rem] border section-line bg-[rgba(12,124,120,0.05)] p-5 text-sm leading-7 text-slate-600">
-                            Keep it short. A useful first brief can be just a product, one supplier link, and the main decision you need help with. Products outside the examples on the site are welcome.
+                            Keep it short. You can submit even if some fields are blank. A useful first brief can be just a product, one supplier link, and the main decision you need help with. Products outside the examples on the site are welcome.
                         </div>
 
                         <button type="submit" class="cta-main w-full rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Send Short Brief</button>
