@@ -1,315 +1,426 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Pricing | chinapartnerhub.com — China Sourcing Partner</title>
-    <meta name="description" content="Transparent pricing for China sourcing services. Full-service sourcing at 8% commission, production management at 5%, and $30 supplier verification (credited as $50 if you order).">
+    <title>China Sourcing Services | Supplier Verification, Production Follow-Up, and Shipping Coordination</title>
+    <meta name="description" content="Explore China Partner Hub services for overseas buyers: supplier verification, factory sourcing, sample review, production follow-up, quality coordination, and shipment support across apparel and industrial categories.">
+    <meta name="keywords" content="China sourcing services, supplier verification China, factory sourcing China, production follow up China, quality check China, shipping coordination China">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chinapartnerhub.com/services.html">
-    <meta property="og:title" content="Services & Pricing | chinapartnerhub.com">
-    <meta property="og:description" content="Transparent China sourcing pricing: 8% full-service, 5% production management, $30 verification (credited if you order).">
+    <meta property="og:title" content="China Sourcing Services | China Partner Hub">
+    <meta property="og:description" content="Service structure for buyers who need clearer supplier judgment and more visible execution in China.">
     <meta property="og:url" content="https://chinapartnerhub.com/services.html">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://chinapartnerhub.com/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://chinapartnerhub.com/supplier-showcase-documentary.png">
+    <meta property="og:image:alt" content="Mixed-category supplier showcase for China Partner Hub services">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://chinapartnerhub.com/og-image.jpg">
+    <meta name="twitter:title" content="China Partner Hub Services">
+    <meta name="twitter:description" content="Documentary-style services page covering sourcing, verification, production, and shipment support in China.">
+    <meta name="twitter:image" content="https://chinapartnerhub.com/supplier-showcase-documentary.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Public Sans", "sans-serif"],
+                        display: ["Newsreader", "serif"]
+                    },
+                    boxShadow: {
+                        dossier: "0 30px 90px rgba(18, 31, 39, 0.18)",
+                        float: "0 18px 40px rgba(18, 31, 39, 0.10)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --ink: #162027;
+            --muted: #5b6971;
+            --line: rgba(22, 32, 39, 0.14);
+            --panel: rgba(255, 255, 255, 0.76);
+            --deep: #13232c;
+            --teal: #0c7c78;
+            --teal-soft: #d9f0ee;
+            --rust: #c05c2f;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Public Sans", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(192, 92, 47, 0.11), transparent 24%),
+                radial-gradient(circle at top right, rgba(12, 124, 120, 0.12), transparent 30%),
+                linear-gradient(180deg, #f8f4ec 0%, #f5f0e6 42%, #f8faf9 100%);
+        }
+
+        .display-font {
+            font-family: "Newsreader", serif;
+        }
+
+        .eyebrow {
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .section-line {
+            border-color: var(--line);
+        }
+
+        .chip {
+            border: 1px solid rgba(19, 35, 44, 0.10);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .glass-panel {
+            background: var(--panel);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 24px 60px rgba(22, 32, 39, 0.10);
+        }
+
+        .cta-main {
+            background: linear-gradient(135deg, var(--teal), #15938d);
+        }
+
+        .cta-alt {
+            background: linear-gradient(135deg, var(--rust), #d97745);
+        }
+
+        .cta-main:hover,
+        .cta-alt:hover {
+            filter: brightness(1.04);
+        }
+
+        .tilt-card {
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+
+        .tilt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 28px 70px rgba(22, 32, 39, 0.14);
+            border-color: rgba(12, 124, 120, 0.28);
+        }
+
+        .image-mask {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.8rem;
+        }
+
+        .image-mask::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(19, 35, 44, 0.04), rgba(19, 35, 44, 0.42));
+        }
+
+        .image-mask > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [{
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"How much does a China sourcing agent charge?","acceptedAnswer":{"@type":"Answer","text":"Most China sourcing agents charge 10-15% commission on order value. ChinaPartnerHub charges 8% for full-service sourcing (factory search, verification, production management, quality inspection, shipping). We also offer production management only at 5% and $30 supplier verification (credited as $50 if you order) as an entry-level service. No factory price markup — you pay the factory directly."}},
-          {"@type":"Question","name":"Is ChinaPartnerHub good for small business sourcing from China?","acceptedAnswer":{"@type":"Answer","text":"Yes. ChinaPartnerHub is built for small-to-mid-size businesses, startups, and e-commerce brands doing $5,000 to $100,000 orders. We accept low MOQ orders (500+ units) that larger agencies reject. Our pricing is transparent: 8% full-service, 5% production management, free verification. You pay factories directly with staged payments via PayPal, Wise, or Alipay."}},
-          {"@type":"Question","name":"How do I find a reliable China procurement partner?","acceptedAnswer":{"@type":"Answer","text":"Look for: (1) transparent pricing without factory markup; (2) proof they visit factories in person; (3) a low-risk way to test their service first; (4) staged payment protection. ChinaPartnerHub offers all four: 8% transparent commission, real factory visit documentation on our About page, $30 supplier verification (credited as $50 if you order) as a trial, and staged 30/40/30 payments."}},
-          {"@type":"Question","name":"What is the best way to pay when sourcing from China?","acceptedAnswer":{"@type":"Answer","text":"Use staged payments: 30% deposit, 40% after production confirmation with real photos/video, 30% before shipping after quality inspection. Pay with methods that offer protection: PayPal (buyer protection), Wise (low fees), or Alipay. Never pay 100% upfront. ChinaPartnerHub manages this payment structure for all clients."}},
-          {"@type":"Question","name":"Can ChinaPartnerHub help me verify a supplier I found on Alibaba?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our $30 supplier verification service checks: business license authenticity, factory vs trading company status, export records, and digital footprint. We give you a Go/No-Go recommendation. The $30 is credited as $50 toward your first order if you proceed with full sourcing."}},
-          {"@type":"Question","name":"Do you mark up factory prices?","acceptedAnswer":{"@type":"Answer","text":"No. You pay the factory directly, and you see the exact factory quote. Our commission is separate and transparent. We have no incentive to steer you toward more expensive factories."}},
-          {"@type":"Question","name":"How and when do I pay?","acceptedAnswer":{"@type":"Answer","text":"We recommend staged payments to the factory: 30% deposit, 40% after production confirmation with real photos/video, 30% before shipping after quality inspection. You can pay via PayPal, Wise, Alipay, or bank transfer. Our commission is invoiced separately at each stage."}},
-          {"@type":"Question","name":"What if I'm not satisfied?","acceptedAnswer":{"@type":"Answer","text":"If we can't find a suitable factory, you pay nothing. If production issues arise, we work to resolve them at no extra cost — it's our job to get it right."}},
-          {"@type":"Question","name":"I'm a startup with a small order. Will you still work with me?","acceptedAnswer":{"@type":"Answer","text":"Yes — small orders are where we add the most value. Large agencies often reject orders under $10,000. We built our process specifically for startups and small brands. A 500-unit order today can become a 50,000-unit order next year."}},
-          {"@type":"Question","name":"How is ChinaPartnerHub different from a big sourcing company?","acceptedAnswer":{"@type":"Answer","text":"Big sourcing companies have systems and scale. But if you're a small-to-mid-size buyer, you may not get much attention there — their best people work on their biggest accounts. We focus exclusively on clients who need real attention: startups, e-commerce brands, and businesses doing $5,000–$100,000 orders. You get direct access to the person actually visiting factories, not an account manager reading from a dashboard."}},
-          {"@type":"Question","name":"How to buy from China safely without getting scammed?","acceptedAnswer":{"@type":"Answer","text":"Follow these steps: (1) Verify the supplier's business license — check if it's a real factory or just a trading company with a factory photo; (2) Never pay 100% upfront — use staged payments; (3) Have someone physically inspect the goods before shipment; (4) Use payment methods with buyer protection like PayPal. ChinaPartnerHub handles all four protections as part of our service."}},
-          {"@type":"Question","name":"I'm new to importing from China — where do I even start?","acceptedAnswer":{"@type":"Answer","text":"Start with a conversation, not a contract. Tell us what product you want, your target quantity, and your budget range. We'll give you an honest assessment: is it feasible, what should it cost, which factory types make sense. No commitment. No hard sell. Many clients come to us after wasting months on Alibaba messaging factories that turned out to be middlemen."}}
-        ]
-      }]
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://chinapartnerhub.com/services.html#webpage",
+          "url": "https://chinapartnerhub.com/services.html",
+          "name": "China Partner Hub services",
+          "description": "Services page covering supplier verification, factory sourcing, production follow-up, and shipping coordination."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://chinapartnerhub.com/services.html#service-offer",
+          "name": "China sourcing support services",
+          "provider": {
+            "@id": "https://chinapartnerhub.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": [
+            "Supplier verification",
+            "Factory sourcing",
+            "Sample review",
+            "Production follow-up",
+            "Quality coordination",
+            "Shipping coordination"
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": [
+              "Overseas brands",
+              "Importers",
+              "Ecommerce sellers",
+              "Industrial buyers"
+            ]
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://chinapartnerhub.com/#organization",
+          "name": "China Partner Hub",
+          "url": "https://chinapartnerhub.com/",
+          "logo": "https://chinapartnerhub.com/brand-icon.svg?v=3",
+          "email": "info@chinapartnerhub.com",
+          "telephone": "+86-18005455057"
+        }
+      ]
     }
     </script>
-
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="llms" href="/llms.txt">
 </head>
-<body>
-
-<!-- Trust Bar -->
-<div style="background:var(--color-navy);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:0.02em;">
-    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:8px;animation:pulse-glow 2s infinite;"></span>
-    Transparent pricing. No hidden fees. No surprises.
-</div>
-
-<!-- Navigation -->
-<nav class="nav" id="navbar">
-    <div class="container">
-        <a href="index.html" class="nav-logo"><img src="logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
-        <ul class="nav-links">
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="services.html" class="active">Services & Pricing</a></li>
-            <li><a href="verified-suppliers.html">Verified Suppliers</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="insights/">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="how-it-works.html">How It Works</a>
-    <a href="services.html">Services & Pricing</a>
-    <a href="verified-suppliers.html">Verified Suppliers</a>
-    <a href="about.html">About</a>
-    <a href="insights/">Insights</a>
-    <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:1rem;">Get Started</a>
-</div>
-
-<!-- Hero -->
-<section class="section" style="text-align:center;background:var(--color-white);">
-    <div class="container container-narrow">
-        <span class="badge badge-green" style="margin-bottom:1rem;">Services & Pricing</span>
-        <h1>What you pay. What you get. Simple.</h1>
-        <p style="color:var(--color-gray-600);font-size:1.125rem;max-width:600px;margin:1rem auto 0;">One commission covers everything. No hidden fees, no surprise charges, no "optional extras" that turn out to be essential.</p>
-    </div>
-</section>
-
-<!-- Full Service -->
-<section class="section" style="background:var(--color-white-pure);">
-    <div class="container" style="max-width:1000px;">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:start;">
-            <div>
-                <div style="display:flex;gap:0.5rem;margin-bottom:1rem;">
-                    <span class="badge badge-blue">Core Service</span>
-                    <span class="badge badge-green">Most Popular</span>
-                </div>
-                <h2 style="font-size:2rem;margin-bottom:1.5rem;">Full Sourcing Partnership</h2>
-                <p style="color:var(--color-gray-600);line-height:1.8;margin-bottom:1.5rem;">We handle everything from finding the right factory to delivering finished goods. You get one point of contact, one transparent fee, and zero headaches.</p>
-                <h3 style="font-size:1.1rem;margin-bottom:1rem;">What's included:</h3>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;">
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Factory search & shortlisting</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Supplier background verification</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> On-site factory visit & audit</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Sample collection & local review</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Comparative vendor analysis</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Price negotiation with factories</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Production management & tracking</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Real-time video updates from factory</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> In-production quality spot-checks</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Pre-shipment quality inspection</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Shipping coordination & tracking</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Dedicated communication throughout</div>
-                </div>
-            </div>
-            <div class="card" style="background:var(--color-primary-soft);border:2px solid var(--color-primary);position:sticky;top:5rem;text-align:center;">
-                <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-primary);margin-bottom:0.5rem;">Pricing</p>
-                <div style="font-size:4rem;font-weight:900;color:var(--color-primary);line-height:1;">8%</div>
-                <p style="color:var(--color-gray-600);margin-bottom:1.5rem;">of order value</p>
-                <div style="border-top:1px solid rgba(13,92,46,0.2);padding-top:1.5rem;margin-bottom:1.5rem;">
-                    <p style="font-size:0.9rem;color:var(--color-gray-600);"><strong style="color:var(--color-gray-900);">Minimum fee:</strong> $100 per order</p>
-                </div>
-                <div style="background:white;border-radius:0.75rem;padding:1rem;margin-bottom:1.5rem;border:1px solid rgba(13,92,46,0.2);">
-                    <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-gray-500);font-weight:600;margin-bottom:0.25rem;">Example</p>
-                    <p style="font-size:0.9rem;">Order: <strong>$5,000</strong> → Fee: <strong style="color:var(--color-primary);">$400</strong></p>
-                </div>
-                <a href="contact.html" class="btn btn-primary btn-block btn-lg">Start Sourcing <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+<body class="antialiased">
+    <div class="border-b section-line bg-[rgba(19,35,44,0.96)] text-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-3 text-center text-[11px] font-semibold tracking-[0.16em] sm:text-xs">
+            <span class="inline-flex h-2 w-2 rounded-full bg-[#9de7df]"></span>
+            <span>Structured for buyers who need real execution support, not just supplier introductions.</span>
         </div>
     </div>
-</section>
 
-<!-- Production Management -->
-<section class="section" style="background:var(--color-gray-50);">
-    <div class="container" style="max-width:1000px;">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:start;">
-            <div>
-                <h2 style="font-size:2rem;margin-bottom:1.5rem;">Production Management Only</h2>
-                <p style="color:var(--color-gray-600);line-height:1.8;margin-bottom:1.5rem;">Already have a factory but need someone on the ground to manage production and quality? We step in as your eyes and ears — without replacing your existing supplier relationships.</p>
-                <h3 style="font-size:1.1rem;margin-bottom:1rem;">What's included:</h3>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;">
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Production progress tracking</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> On-site quality spot-checks</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Real-time video updates</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Issue identification & resolution</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Pre-shipment inspection</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Shipping coordination</div>
+    <nav class="sticky top-0 z-50 border-b section-line bg-[rgba(248,244,236,0.84)] backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="index.html" class="flex items-center gap-4">
+                <img src="brand-icon.svg?v=3" alt="China Partner Hub" class="h-12 w-12 rounded-2xl object-contain shadow-sm sm:h-14 sm:w-14">
+                <div class="hidden sm:block">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">China Partner Hub</p>
+                    <p class="text-sm text-slate-700">Supplier verification and sourcing control in China</p>
                 </div>
-                <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:0.75rem;padding:1rem;margin-top:1.5rem;">
-                    <p style="font-size:0.9rem;"><strong>Best for:</strong> Buyers who already have trusted suppliers but need local oversight to protect quality and timelines.</p>
-                </div>
+            </a>
+            <div class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+                <a href="about.html" class="transition hover:text-teal-700">About</a>
+                <a href="services.html" class="text-teal-800">Services</a>
+                <a href="contact.html" class="transition hover:text-teal-700">Contact</a>
+                <a href="insights/index.html" class="transition hover:text-teal-700">Insights</a>
             </div>
-            <div class="card" style="text-align:center;position:sticky;top:5rem;">
-                <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-gray-500);margin-bottom:0.5rem;">Pricing</p>
-                <div style="font-size:4rem;font-weight:900;color:var(--color-navy);line-height:1;">5%</div>
-                <p style="color:var(--color-gray-600);margin-bottom:1.5rem;">of order value</p>
-                <div style="border-top:1px solid var(--color-gray-200);padding-top:1.5rem;margin-bottom:1.5rem;">
-                    <p style="font-size:0.9rem;color:var(--color-gray-600);"><strong style="color:var(--color-gray-900);">Minimum fee:</strong> $100 per order</p>
-                </div>
-                <a href="contact.html" class="btn btn-outline btn-block btn-lg">Inquire</a>
+            <div class="flex items-center gap-3">
+                <a href="start-project.html" class="hidden rounded-full border border-slate-300 px-4 py-2 text-sm font-bold text-slate-800 transition hover:border-slate-400 sm:inline-flex">Start Project</a>
+                <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/10 transition">Start on WhatsApp</a>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- Supplier Verification -->
-<section class="section" style="background:var(--color-white-pure);">
-    <div class="container" style="max-width:1000px;">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:start;">
-            <div>
-                <span class="badge badge-gray" style="margin-bottom:1rem;">Due Diligence</span>
-                <h2 style="font-size:2rem;margin-bottom:1.5rem;">Supplier Verification</h2>
-                <p style="color:var(--color-gray-600);line-height:1.8;margin-bottom:1rem;">Already found a supplier on Alibaba or through a referral? Not sure if they're legit? Send us their details. We'll verify them — and if you proceed to a full partnership, your $30 becomes a $50 credit.</p>
-                <h3 style="font-size:1.1rem;margin-bottom:1rem;">What you get:</h3>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;">
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Business license verification</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Factory vs. trading company check</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Export record check</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Digital footprint review</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Risk signal summary</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Go / No-Go recommendation</div>
-                </div>
-            </div>
-            <div class="card" style="text-align:center;position:sticky;top:5rem;">
-                <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-gray-500);margin-bottom:0.5rem;">Verification Fee</p>
-                <div style="font-size:4rem;font-weight:900;color:#4B5563;line-height:1;">$30</div>
-                <p style="color:var(--color-gray-600);margin-bottom:1.5rem;">one-time · credited if you order</p>
-                <div style="border-top:1px solid var(--color-gray-200);padding-top:1.5rem;margin-bottom:1.5rem;">
-                    <div style="background:#FFFBEB;border-radius:0.75rem;padding:1rem;margin-bottom:0.75rem;border:1px solid #FDE68A;">
-                        <p style="font-size:0.9rem;color:#92400E;font-weight:600;">Proceed to full sourcing?</p>
-                        <p style="font-size:0.85rem;color:#92400E;margin-top:0.25rem;">$30 becomes <strong style="color:#B8860B;font-size:1.1rem;">$50</strong> credit toward your order.</p>
+    <main>
+        <section class="px-6 pb-16 pt-12 lg:pb-24 lg:pt-16">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+                <div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Supplier verification</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Production follow-up</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Shipment coordination</span>
                     </div>
-                    <p style="font-size:0.8rem;color:var(--color-gray-500);">Don't proceed? The $30 covers our verification work.</p>
-                </div>
-                <a href="verification.html" class="btn btn-outline btn-block btn-lg">Verify a Supplier <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Sourcing Discovery -->
-<section class="section" style="background:var(--color-white);">
-    <div class="container" style="max-width:1000px;">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:start;">
-            <div>
-                <span class="badge badge-gold" style="margin-bottom:1rem;">Discovery Service</span>
-                <h2 style="font-size:2rem;margin-bottom:1.5rem;">Sourcing Discovery</h2>
-                <p style="color:var(--color-gray-600);line-height:1.8;margin-bottom:1rem;">Tell us what you need. We search our factory network, shortlist the best matches, and present them to you — with real factory visit data. You decide if you want to proceed to a full partnership.</p>
-                <p style="color:var(--color-gray-600);line-height:1.8;margin-bottom:1.5rem;"><strong style="color:var(--color-gray-900);">Why this exists:</strong> We invest real time searching, visiting, and vetting factories. The $30 ensures you're serious — not just price-shopping or window-shopping. It protects our time while keeping the door open for genuine buyers.</p>
-                <h3 style="font-size:1.1rem;margin-bottom:1rem;">What you get:</h3>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;">
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Factory search & shortlisting</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Initial supplier verification</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Price range comparison</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Factory suitability report</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Real photos & on-site notes</div>
-                    <div style="font-size:0.9rem;color:var(--color-gray-700);padding:0.3rem 0;"><span style="color:#059669;">✓</span> Clear recommendation</div>
-                </div>
-            </div>
-            <div class="card" style="text-align:center;position:sticky;top:5rem;border:2px solid #F59E0B;">
-                <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#92400E;margin-bottom:0.5rem;">Discovery Fee</p>
-                <div style="font-size:4rem;font-weight:900;color:#B8860B;line-height:1;">$30</div>
-                <p style="color:var(--color-gray-600);margin-bottom:1.5rem;">one-time · non-refundable</p>
-                <div style="border-top:1px solid rgba(180,134,11,0.2);padding-top:1.5rem;margin-bottom:1.5rem;">
-                    <div style="background:#FFFBEB;border-radius:0.75rem;padding:1rem;margin-bottom:0.75rem;border:1px solid #FDE68A;">
-                        <p style="font-size:0.9rem;color:#92400E;font-weight:600;">Place an order through us?</p>
-                        <p style="font-size:0.85rem;color:#92400E;margin-top:0.25rem;">$30 becomes <strong style="color:#B8860B;font-size:1.1rem;">$50</strong> credit toward your order.</p>
+                    <p class="eyebrow mt-8 text-teal-800">Services</p>
+                    <h1 class="display-font mt-5 max-w-5xl text-[3.1rem] font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 sm:text-[4.4rem]">Sourcing, supplier verification, production follow-up, and shipment coordination with clear pricing.</h1>
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-700">Service scope, fee structure, payment stages, and entry options are shown clearly so buyers can decide how to start without guessing.</p>
+                    <div class="mt-8 grid max-w-3xl gap-4 sm:grid-cols-3">
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Commission</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">8% for full sourcing support. Publicly stated, not hidden behind a contact form.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Factory pricing</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">No factory price markup. Buyers can see the supplier quote directly.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Payment model</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">30/40/30 staged payments instead of a vague or 100% upfront structure.</p>
+                        </div>
                     </div>
-                    <p style="font-size:0.8rem;color:var(--color-gray-500);">Don't order? The $30 covers our search time. No hard feelings.</p>
                 </div>
-                <a href="contact.html" class="btn btn-accent btn-block btn-lg">Start Discovery <i class="fa-solid fa-magnifying-glass"></i></a>
-                <div style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-                    <a href="https://www.paypal.me/YourChinaPartner/30" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.75rem;background:#0070BA;color:white;border-radius:0.5rem;font-weight:600;font-size:0.9rem;text-align:center;transition:all 0.2s;" onmouseover="this.style.opacity=0.9" onmouseout="this.style.opacity=1"><i class="fa-brands fa-paypal"></i> Pay $30 with PayPal <span style="font-weight:400;opacity:0.6;font-size:0.8rem;">(海外推荐)</span></a>
-                    <a href="https://wise.com/pay/r/2-wQBSrvZDS8Mio" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.75rem;background:#163B36;color:white;border-radius:0.5rem;font-weight:600;font-size:0.9rem;text-align:center;transition:all 0.2s;" onmouseover="this.style.opacity=0.9" onmouseout="this.style.opacity=1"><i class="fa-solid fa-building-columns"></i> Pay $30 with Wise <span style="font-weight:400;opacity:0.7;">(enter $30 manually)</span></a>
+
+                <div class="glass-panel rounded-[2rem] p-4 shadow-dossier">
+                    <div class="image-mask">
+                        <img src="supplier-showcase-documentary.png" alt="Documentary-style supplier showcase spanning packaging, soft goods, and industrial categories" class="h-[430px] w-full object-cover">
+                        <div class="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+                            <p class="eyebrow text-[#c8f7f3]">Mixed-category capability</p>
+                            <p class="mt-3 max-w-md text-xl font-bold leading-8">Real sourcing across apparel, workshop supply, machinery, dust systems, and shipping support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y section-line bg-[rgba(255,255,255,0.74)] px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-6 lg:grid-cols-3">
+                    <article class="tilt-card rounded-[2rem] border section-line bg-white p-8 shadow-float lg:col-span-2">
+                        <div class="flex flex-wrap gap-3">
+                            <span class="rounded-full bg-[var(--teal-soft)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Primary engagement</span>
+                            <span class="rounded-full bg-[rgba(192,92,47,0.12)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#9a4b29]">End-to-end support</span>
+                        </div>
+                        <h2 class="mt-6 text-4xl font-bold text-slate-950">Sourcing partnership from supplier search through shipment readiness</h2>
+                        <p class="mt-5 text-lg leading-8 text-slate-700">For buyers who want one operating partner to help define the sourcing path, compare supplier fit, review samples, follow production, coordinate checkpoints, and keep the shipment handoff visible.</p>
+                        <div class="mt-8 grid gap-4 md:grid-cols-2 text-sm leading-7 text-slate-700">
+                            <div>Factory search aligned to category, order size, and execution risk</div>
+                            <div>Supplier verification before deposit or commitment expands</div>
+                            <div>Sample review and communication discipline checks</div>
+                            <div>Production follow-up, issue escalation, and timeline visibility</div>
+                            <div>Quality coordination around key checkpoints</div>
+                            <div>Shipment readiness and handoff support</div>
+                        </div>
+                    </article>
+                    <aside class="rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] p-8 text-white shadow-dossier">
+                        <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#9de7df]">Why this matters</p>
+                        <h3 class="mt-5 text-2xl font-bold">Most competitors do not show pricing this clearly.</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-300">Large agencies often hide fees inside a longer sales process. Smaller agents often add margin on the factory price. China Partner Hub keeps the service fee, factory quote, and payment stages visible from the start.</p>
+                        <a href="contact.html" class="mt-8 inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-white/40">Ask about fit and scope</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-5 md:grid-cols-3">
+                    <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <div class="image-mask mb-6">
+                            <img src="supplier-apparel-01.jpg" alt="Apparel category sourcing reference" class="h-[220px] w-full object-cover">
+                        </div>
+                        <p class="eyebrow text-teal-800">Service 01</p>
+                        <h2 class="mt-4 text-2xl font-bold text-slate-950">Supplier verification and first-pass risk filtering</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">For buyers who already found a factory or trader and want a clearer read on fit, role, communication quality, and next-step risk.</p>
+                    </article>
+                    <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <div class="image-mask mb-6">
+                            <img src="supplier-cyclone-01.jpg" alt="Industrial sourcing reference image" class="h-[220px] w-full object-cover">
+                        </div>
+                        <p class="eyebrow text-rust-700">Service 02</p>
+                        <h2 class="mt-4 text-2xl font-bold text-slate-950">Factory search for mixed categories and harder-to-read projects</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Useful when the category is outside typical ecommerce sourcing or when the buyer wants stronger filtering across workshop, utility, or equipment-adjacent suppliers.</p>
+                    </article>
+                    <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <div class="image-mask mb-6">
+                            <img src="supplier-shipping-redacted.jpg" alt="Redacted shipment support reference" class="h-[220px] w-full object-cover">
+                        </div>
+                        <p class="eyebrow text-teal-800">Service 03</p>
+                        <h2 class="mt-4 text-2xl font-bold text-slate-950">Production follow-up and shipment support</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">For buyers who already chose a supplier but still need a local operator to track progress, resolve friction, and keep shipment milestones visible.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y section-line bg-[rgba(19,35,44,0.96)] px-6 py-24 text-white">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
+                    <div>
+                        <p class="eyebrow text-[#9de7df]">Why buyers pay for this</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">Not for more messages. For fewer blind spots.</h2>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2">
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Stronger supplier judgment</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">The right supplier is not always the most responsive at the start. Fit requires reading communication, process, expectations, and category reality together.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Less production drift</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Once timelines start moving, ambiguity gets expensive. Local follow-up reduces the chance that small issues become shipment-stage problems.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">More credible reporting</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Buyers trust updates when they are concrete, measured, and tied to evidence rather than vague reassurance.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Safer public proof</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Photos, samples, and shipment context can increase trust when they are curated carefully and stripped of identifying labels or codes.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-24">
+            <div class="mx-auto max-w-6xl rounded-[2.4rem] border section-line bg-[rgba(255,255,255,0.82)] p-8 shadow-dossier sm:p-12">
+                <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                    <div>
+                        <p class="eyebrow text-teal-800">Fit check</p>
+                        <h2 class="display-font mt-4 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">Orders are scoped around supplier risk, production visibility, and shipping control.</h2>
+                        <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700">Send the category, target quantity, current supplier status, and the part of the order that needs support. The reply can then focus on the work that actually matters.</p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="contact.html" class="cta-main inline-flex justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Talk through your project</a>
+                        <a href="mailto:info@chinapartnerhub.com" class="cta-alt inline-flex justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-orange-900/10 transition">Email the brief</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y section-line bg-[rgba(19,35,44,0.96)] px-6 py-24 text-white">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
+                    <div>
+                        <p class="eyebrow text-[#9de7df]">Payment options</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">Entry services can start quickly. Larger projects move through staged payments.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-200">Quick-entry services can use direct payment links. Larger sourcing projects move through a 30/40/30 structure with scope agreed first.</p>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2">
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">PayPal</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Useful for a faster start on $39 verification or discovery services.</p>
+                            <a href="https://www.paypal.me/YourChinaPartner/39" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-white/40">Pay $39 by PayPal</a>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Wise</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Useful when the buyer prefers a lower-friction cross-border transfer option.</p>
+                            <a href="https://wise.com/pay/r/2-wQBSrvZDS8Mio" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-white/40">Pay $39 by Wise</a>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Alipay or bank transfer</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">Available when the order has already moved into a more formal sourcing or production stage.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border border-white/10 bg-white/6 p-7">
+                            <h3 class="text-2xl font-bold">Staged payment logic</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-200">30% to start, 40% during production, and 30% before final handoff keeps the buyer closer to actual progress.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t section-line bg-[rgba(255,255,255,0.7)]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-4">
+                    <img src="brand-icon.svg?v=3" alt="China Partner Hub icon" class="h-12 w-12 rounded-2xl object-contain shadow-sm">
+                    <div>
+                        <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-950">China Partner Hub</p>
+                        <p class="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">On-the-ground China sourcing partner</p>
+                    </div>
+                </div>
+                <p class="mt-5 max-w-sm text-sm leading-7 text-slate-600">Service scope, pricing, payment stages, and starting options are shown clearly for supplier verification, sourcing support, and production follow-up.</p>
+            </div>
+            <div class="md:text-center">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Navigation</h3>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><a href="about.html" class="transition hover:text-teal-700">About</a></li>
+                    <li><a href="verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a></li>
+                    <li><a href="case-study-factory-price-gap.html" class="transition hover:text-teal-700">Case Study</a></li>
+                    <li><a href="verification.html" class="transition hover:text-teal-700">Verification</a></li>
+                    <li><a href="contact.html" class="transition hover:text-teal-700">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Contact</h3>
+                <div class="mt-5 space-y-4 text-sm text-slate-700 md:flex md:flex-col md:items-end">
+                    <a href="mailto:info@chinapartnerhub.com" class="transition hover:text-teal-700">info@chinapartnerhub.com</a>
+                    <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="transition hover:text-teal-700">+86 180 0545 5057</a>
+                    <p><a href="privacy.html" class="transition hover:text-teal-700">Privacy</a> / <a href="terms.html" class="transition hover:text-teal-700">Terms</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Pricing FAQ -->
-<section class="section section-accent">
-    <div class="container container-narrow">
-        <h2 class="text-center" style="margin-bottom:2rem;">Pricing FAQ</h2>
-        <div class="faq-item open">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What's the $30 Sourcing Discovery — and why charge for it?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>The $30 Sourcing Discovery is a low-commitment way to test our service. We search our network, shortlist factories, and present real findings. The fee filters out price-shoppers — people who ask us to find products with no intention of ordering. If you place an order through us, the $30 becomes a $50 credit (you effectively get the discovery for free plus $20 off). If you don't order, the $30 is non-refundable and covers our time searching and vetting. It's a fair trade: you get real factory intelligence, we get compensated for the work.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Why 8% — is that competitive?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Most China sourcing agents charge 10–15% commission. We charge 8% as an early-stage rate — competitive enough to earn your business, sustainable enough to give every order real attention.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What does the minimum $100 fee cover?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>For very small orders (under ~$1,250), 8% doesn't cover the time we spend on the ground — factory visits, sample checks, production follow-up. The $100 minimum ensures we can still give your order proper attention without cutting corners.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do you mark up factory prices?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>No. You pay the factory directly, and you see the exact factory quote. Our commission is separate and transparent. We have no incentive to steer you toward more expensive factories.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">How and when do I pay?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>We recommend staged payments to the factory: 30% deposit, 40% after production confirmation with real photos/video, 30% before shipping after quality inspection. You can pay via PayPal, Wise, Alipay, or bank transfer.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What if I'm not satisfied?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>If we can't find a suitable factory, you pay nothing. If production issues arise, we work to resolve them at no extra cost — it's our job to get it right.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">I'm a startup with a small order. Will you still work with me?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Yes — small orders are where we add the most value. Large agencies often reject orders under $10,000. We built our process specifically for startups and small brands. A 500-unit order today can become a 50,000-unit order next year.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">How do I know I can trust you with my money?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Three things: (1) You pay the factory directly — our commission is separate and your money never sits in our account; (2) We use staged 30/40/30 payments; (3) We offer $30 supplier verification as a first step — credited as $50 if you order. Try our work before committing to a full partnership.</p></div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">How is ChinaPartnerHub different from a big sourcing company?<span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Big sourcing companies have systems and scale. But if you're a small-to-mid-size buyer, you may not get much attention there — their best people work on their biggest accounts. We focus exclusively on clients who need real attention: startups, e-commerce brands, and businesses doing $5,000–$100,000 orders.</p></div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="section" style="text-align:center;background:var(--color-white);">
-    <div class="container container-narrow">
-        <h2 style="margin-bottom:1rem;">Tell us what you need. We'll tell you if we can help.</h2>
-        <p style="color:var(--color-gray-600);font-size:1.125rem;margin-bottom:2rem;">No obligation. No hard sell. Just an honest conversation.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer style="background:var(--color-navy);color:#D1D5DB;padding:4rem 0 2rem;">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
-            <div><img src="logo.png" alt="ChinaPartnerHub" style="height:28px;margin-bottom:1rem;filter:brightness(10);"><p style="font-size:0.9rem;line-height:1.7;max-width:300px;opacity:0.8;">Your China sourcing partner. Transparent pricing, real commitment, no surprises.</p></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><li><a href="how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="verified-suppliers.html" style="opacity:0.8;">Verified Suppliers</a></li><li><a href="about.html" style="opacity:0.8;">About</a></li><li><a href="verification.html" style="opacity:0.8;">Supplier Verification — $30</a></li><li><a href="contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Contact</h4><div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><a href="mailto:info@chinapartnerhub.com" style="opacity:0.8;"><i class="fa-regular fa-envelope" style="color:#059669;margin-right:0.5rem;"></i>info@chinapartnerhub.com</a><a href="https://wa.me/8618660006236" target="_blank" style="opacity:0.8;"><i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:0.5rem;"></i>+86 18660006236</a></div></div>
-        </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:0.8rem;flex-wrap:wrap;gap:1rem;"><p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p><div style="display:flex;gap:1.5rem;"><a href="privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="terms.html" style="opacity:0.6;">Terms of Service</a></div></div>
-    </div>
-</footer>
-
-<a href="https://wa.me/8618660006236" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-<script>
-const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
-navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
-mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
-const s=document.getElementById('scrollTop');window.addEventListener('scroll',()=>s.classList.toggle('visible',window.scrollY>600));s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-</script>
+    </footer>
 </body>
 </html>

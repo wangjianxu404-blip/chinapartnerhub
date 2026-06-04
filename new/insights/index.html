@@ -1,104 +1,213 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights | chinapartnerhub.com — China Sourcing Knowledge</title>
-    <meta name="description" content="Practical insights on China sourcing, supplier verification, factory audits, and avoiding costly mistakes. Real advice from someone on the ground in China.">
+    <title>Insights | China Partner Hub</title>
+    <meta name="description" content="Practical China sourcing insights on supplier verification, factory fit, production risk, and payment safety.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chinapartnerhub.com/insights/">
-    <meta property="og:title" content="China Sourcing Insights | chinapartnerhub.com">
-    <meta property="og:description" content="Real advice on sourcing from China — from someone actually on the ground.">
-    <meta property="og:url" content="https://chinapartnerhub.com/insights/">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="llms" href="/llms.txt">
+    <meta property="og:title" content="Insights">
+    <meta property="og:description" content="Practical China sourcing insights on supplier verification, factory fit, production risk, and payment safety.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://chinapartnerhub.com/inspection-documentary.png">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Public Sans", "sans-serif"],
+                        display: ["Newsreader", "serif"]
+                    },
+                    boxShadow: {
+                        dossier: "0 30px 90px rgba(18, 31, 39, 0.18)",
+                        float: "0 18px 40px rgba(18, 31, 39, 0.10)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --ink: #162027;
+            --line: rgba(22, 32, 39, 0.14);
+            --teal: #0c7c78;
+            --rust: #c05c2f;
+            --grid: rgba(19, 35, 44, 0.06);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: "Public Sans", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(192, 92, 47, 0.11), transparent 24%),
+                radial-gradient(circle at top right, rgba(12, 124, 120, 0.12), transparent 30%),
+                linear-gradient(180deg, #f8f4ec 0%, #f5f0e6 42%, #f8faf9 100%);
+        }
+        .display-font { font-family: "Newsreader", serif; }
+        .eyebrow { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 800; }
+        .section-line { border-color: var(--line); }
+        .cta-main { background: linear-gradient(135deg, var(--teal), #15938d); }
+        .cta-alt { background: linear-gradient(135deg, var(--rust), #d97745); }
+        .cta-main:hover, .cta-alt:hover { filter: brightness(1.04); }
+        .draft-grid {
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .article-body { color: #334155; font-size: 1.05rem; line-height: 1.95; }
+        .article-body p { margin-top: 1.25rem; }
+        .article-body h2 { margin-top: 2.8rem; font-size: 1.75rem; line-height: 1.2; font-weight: 800; color: #0f172a; }
+        .article-body ul { margin-top: 1.25rem; display: grid; gap: 0.7rem; padding-left: 0; list-style: none; }
+        .article-body li { border-left: 3px solid rgba(12, 124, 120, 0.32); background: rgba(12, 124, 120, 0.045); border-radius: 0.75rem; padding: 0.85rem 1rem; }
+        .article-body table { margin-top: 1.5rem; width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 1rem; font-size: 0.92rem; }
+        .article-body th, .article-body td { border: 1px solid rgba(22, 32, 39, 0.12); padding: 0.85rem; vertical-align: top; }
+        .article-body th { background: rgba(19, 35, 44, 0.96); color: white; }
+        .highlight-box { margin: 2rem 0; border: 1px solid rgba(12, 124, 120, 0.22); border-left: 5px solid var(--teal); background: rgba(12, 124, 120, 0.06); border-radius: 1.2rem; padding: 1.5rem; }
+    </style>
 </head>
-<body>
-
-<div style="background:var(--color-navy);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:0.02em;">
-    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:8px;animation:pulse-glow 2s infinite;"></span>
-    Practical sourcing advice — from the ground in China.
-</div>
-
-<nav class="nav" id="navbar">
-    <div class="container">
-        <a href="../index.html" class="nav-logo"><img src="../logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
-        <ul class="nav-links">
-            <li><a href="../how-it-works.html">How It Works</a></li>
-            <li><a href="../services.html">Services & Pricing</a></li>
-            <li><a href="../verified-suppliers.html">Verified Suppliers</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="index.html" class="active">Insights</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
-        <a href="../contact.html" class="btn btn-primary btn-sm">Get Started</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="../how-it-works.html">How It Works</a><a href="../services.html">Services & Pricing</a><a href="../verified-suppliers.html">Verified Suppliers</a><a href="../about.html">About</a><a href="index.html">Insights</a><a href="../contact.html">Contact</a>
-</div>
-
-<section class="section" style="background:var(--color-white);text-align:center;">
-    <div class="container container-narrow">
-        <span class="badge badge-green" style="margin-bottom:1rem;">Insights</span>
-        <h1>China sourcing advice that's actually useful</h1>
-        <p style="color:var(--color-gray-600);font-size:1.125rem;max-width:600px;margin:1rem auto 0;">No fluff. No recycled blog posts. Just real advice from someone who visits factories, checks samples, and solves sourcing problems every day.</p>
-    </div>
-</section>
-
-<section class="section" style="background:var(--color-gray-50);padding-top:2rem;">
-    <div class="container">
-        <div class="grid-2">
-            <!-- Article 1 -->
-            <div class="card"><span class="badge badge-green" style="margin-bottom:0.75rem;">Sourcing Strategy</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">Why "Cut Out the Middleman" Isn't Always the Right Move</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">For small brands and startups, going factory-direct often creates more problems than it solves. Will the factory care about your order? Will they check details? A good middleman earns their place.</p><a href="why-cutting-middlemen-isnt-always-the-answer.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 2 -->
-            <div class="card"><span class="badge badge-gold" style="margin-bottom:0.75rem;">Risk Awareness</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">In High-Risk Sourcing, Being Low-Profile Matters More Than Big Promises</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">If a supplier promises everything — lowest price, all documents, full guarantees — that's not reassuring. It's a risk signal. The most stable supply chains are often the quietest.</p><a href="low-profile-matters-more-than-big-promises.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 3 -->
-            <div class="card"><span class="badge badge-blue" style="margin-bottom:0.75rem;">Verification</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">Check Before Paying: Most Sourcing Problems Start Before You Send Money</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">Six practical checks to verify a Chinese supplier before payment — from factory vs trading company to sample consistency. Simple steps that filter out most risky suppliers.</p><a href="check-before-paying.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 4 -->
-            <div class="card"><span class="badge badge-blue" style="margin-bottom:0.75rem;">Supplier Verification</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">Who Are You Really Dealing With on Alibaba?</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">Finding products on Alibaba is easy. The hard part is figuring out who is actually behind the listing — a real factory, a trading company, or multiple layers of middlemen.</p><a href="who-are-you-really-dealing-with.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 5 -->
-            <div class="card"><span class="badge badge-green" style="margin-bottom:0.75rem;">Supplier Strategy</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">Supplier Fit Matters More Than Price</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">Why matching supplier size and setup to your stage matters more than getting the lowest quote. Big factories ignore small orders. Small factories can't scale.</p><a href="supplier-fit-matters-more-than-price.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 6 -->
-            <div class="card"><span class="badge badge-blue" style="margin-bottom:0.75rem;">From the Ground</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">Product Ideas Are Everywhere — Sourcing Them Properly Is the Hard Part</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">A personal observation from traveling in China: great product ideas are abundant, but figuring out who you're really dealing with is the real challenge.</p><a href="product-ideas-everywhere-sourcing-is-hard.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 7 -->
-            <div class="card"><span class="badge badge-green" style="margin-bottom:0.75rem;">Origin Story</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">The Gap Between Good Factories and Overseas Buyers — Why I Started This Work</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">AI helps buyers find suppliers faster than ever. But the best small factories in China are still invisible — they don't invest in overseas marketing. That gap is where I work.</p><a href="why-i-started-this-work.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
-            <!-- Article 8 -->
-            <div class="card"><span class="badge badge-gold" style="margin-bottom:0.75rem;">Category Deep-Dive</span><h3 style="font-size:1.3rem;margin-bottom:0.75rem;">China Tea Sourcing Guide: Yunnan, Zhejiang & Anhui for US/EU Buyers</h3><p style="color:var(--color-gray-600);font-size:0.95rem;line-height:1.7;margin-bottom:1rem;">Which provinces and tea categories work best for Western markets — from premium Pu'er to standardized bulk green tea. A practical reference for planning factory visits.</p><a href="china-tea-sourcing-guide-yunnan.html" class="btn btn-ghost btn-sm">Read full article →</a></div>
+<body class="antialiased">
+    <div class="border-b section-line bg-[rgba(19,35,44,0.96)] text-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-3 text-center text-[11px] font-semibold tracking-[0.16em] sm:text-xs">
+            <span class="inline-flex h-2 w-2 rounded-full bg-[#9de7df]"></span>
+            <span>Practical China sourcing advice from fieldwork, supplier checks, and real buyer problems.</span>
         </div>
     </div>
-</section>
-
-<section class="section section-accent" style="text-align:center;">
-    <div class="container container-narrow">
-        <h2 style="margin-bottom:1rem;">Have a sourcing question?</h2>
-        <p style="color:var(--color-gray-600);margin-bottom:2rem;">We write about real problems we solve every day. If there's a topic you'd like us to cover, tell us.</p>
-        <a href="../contact.html" class="btn btn-primary">Suggest a Topic →</a>
-    </div>
-</section>
-
-<footer style="background:var(--color-navy);color:#D1D5DB;padding:4rem 0 2rem;">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
-            <div><img src="../logo.png" alt="ChinaPartnerHub" style="height:28px;margin-bottom:1rem;filter:brightness(10);"><p style="font-size:0.9rem;line-height:1.7;max-width:300px;opacity:0.8;">Real sourcing advice from someone on the ground in China.</p></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><li><a href="../how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="../services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="../verified-suppliers.html" style="opacity:0.8;">Verified Suppliers</a></li><li><a href="../about.html" style="opacity:0.8;">About</a></li><li><a href="../verification.html" style="opacity:0.8;">Supplier Verification — $30</a></li><li><a href="index.html" style="opacity:0.8;">Insights</a></li><li><a href="../contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Contact</h4><div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><a href="mailto:info@chinapartnerhub.com" style="opacity:0.8;"><i class="fa-regular fa-envelope" style="color:#059669;margin-right:0.5rem;"></i>info@chinapartnerhub.com</a><a href="https://wa.me/8618660006236" target="_blank" style="opacity:0.8;"><i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:0.5rem;"></i>+86 18660006236</a></div></div>
+    <nav class="sticky top-0 z-50 border-b section-line bg-[rgba(248,244,236,0.84)] backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="../index.html" class="flex items-center gap-4">
+                <img src="../brand-icon.svg?v=3" alt="China Partner Hub" class="h-12 w-12 rounded-2xl object-contain shadow-sm sm:h-14 sm:w-14">
+                <div class="hidden sm:block">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">China Partner Hub</p>
+                    <p class="text-sm text-slate-700">Supplier verification and sourcing control in China</p>
+                </div>
+            </a>
+            <div class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+                <a href="../about.html" class="transition hover:text-teal-700">About</a>
+                <a href="../services.html" class="transition hover:text-teal-700">Services</a>
+                <a href="../verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a>
+                <a href="../verification.html" class="transition hover:text-teal-700">Verification</a>
+                <a href="index.html" class="text-teal-800">Insights</a>
+                <a href="../contact.html" class="transition hover:text-teal-700">Contact</a>
+            </div>
+            <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/10 transition">Start on WhatsApp</a>
         </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:0.8rem;flex-wrap:wrap;gap:1rem;"><p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p><div style="display:flex;gap:1.5rem;"><a href="../privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="../terms.html" style="opacity:0.6;">Terms of Service</a></div></div>
-    </div>
-</footer>
+    </nav>
+    <main>
+        <section class="draft-grid px-6 py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.82fr_0.38fr] lg:items-end">
+                    <div>
+                        <p class="eyebrow text-teal-800">Insights</p>
+                        <h1 class="display-font mt-5 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 sm:text-7xl">China sourcing advice that is actually useful.</h1>
+                        <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-700">No recycled SEO posts. These articles are written for buyers comparing suppliers, quotes, samples, payment risk, and production reality in China.</p>
+                    </div>
+                    <div class="rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] p-7 text-white shadow-dossier">
+                        <p class="eyebrow text-[#9de7df]">Editorial focus</p>
+                        <p class="mt-4 text-sm leading-7 text-slate-200">Supplier verification, factory fit, middleman risk, payment timing, category sourcing, and the practical decisions that protect a buyer before money moves.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<a href="https://wa.me/8618660006236" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <section class="px-6 pb-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-6 md:grid-cols-2">
+                    <a href="why-cutting-middlemen-isnt-always-the-answer.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Sourcing Strategy</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">Why &quot;Cut Out the Middleman&quot; Isn&#x27;t Always the Right Move</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">For small brands and startups, going factory-direct often creates more problems than it solves. A good middleman earns their place when the work prevents costly mistakes.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="low-profile-matters-more-than-big-promises.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Risk Awareness</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">In High-Risk Sourcing, Being Low-Profile Matters More Than Big Promises</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">If a supplier promises everything too easily, that is not reassuring. It is often a risk signal.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="check-before-paying.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Verification</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">Check Before Paying: Most Sourcing Problems Start Before You Send Money</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Six practical checks to verify a Chinese supplier before payment, from factory role to sample consistency.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="who-are-you-really-dealing-with.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Supplier Verification</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">Who Are You Really Dealing With on Alibaba?</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Finding products on Alibaba is easy. The hard part is identifying who is actually behind the listing.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="supplier-fit-matters-more-than-price.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Supplier Strategy</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">Supplier Fit Matters More Than Price</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Supplier size, setup, communication, and order attention matter more than the lowest quote.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="product-ideas-everywhere-sourcing-is-hard.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">From the Ground</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">Product Ideas Are Everywhere. Sourcing Them Properly Is the Hard Part</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Great product ideas are abundant in China, but reliable sourcing depends on verification and execution.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="why-i-started-this-work.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Origin Story</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">The Gap Between Good Factories and Overseas Buyers, and Why I Started This Work</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Many capable factories are invisible to overseas buyers. That gap is where China Partner Hub works.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a><a href="china-tea-sourcing-guide-yunnan.html" class="rounded-[2rem] border section-line bg-white p-7 shadow-float transition hover:-translate-y-1 hover:border-teal-600/30 hover:shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Category Deep-Dive</p>
+                        <h2 class="mt-4 text-2xl font-bold leading-tight text-slate-950">China Tea Sourcing Guide: Yunnan, Zhejiang and Anhui for US/EU Buyers</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">A practical reference for planning tea sourcing by province, category, supplier type, and export fit.</p>
+                        <span class="mt-6 inline-flex text-sm font-bold text-teal-800">Read full article -></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<script>
-const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
-navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
-mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
-const s=document.getElementById('scrollTop');window.addEventListener('scroll',()=>s.classList.toggle('visible',window.scrollY>600));s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-</script>
+        <section class="border-y section-line bg-[rgba(19,35,44,0.96)] px-6 py-20 text-white">
+            <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                    <p class="eyebrow text-[#9de7df]">Have a sourcing question?</p>
+                    <h2 class="display-font mt-4 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">Send the product, supplier link, or quote concern.</h2>
+                    <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">A short message is enough to route the next step into supplier verification, sourcing discovery, or production follow-up.</p>
+                </div>
+                <a href="../contact.html" class="cta-main inline-flex justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Leave a message</a>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t section-line bg-[rgba(255,255,255,0.72)]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-4">
+                    <img src="../brand-icon.svg?v=3" alt="China Partner Hub icon" class="h-12 w-12 rounded-2xl object-contain shadow-sm">
+                    <div>
+                        <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-950">China Partner Hub</p>
+                        <p class="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">On-the-ground China sourcing partner</p>
+                    </div>
+                </div>
+                <p class="mt-5 max-w-sm text-sm leading-7 text-slate-600">Real sourcing advice from someone on the ground in China, written for buyers who need practical supplier judgment.</p>
+            </div>
+            <div class="md:text-center">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Navigation</h3>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><a href="../about.html" class="transition hover:text-teal-700">About</a></li>
+                    <li><a href="../services.html" class="transition hover:text-teal-700">Services</a></li>
+                    <li><a href="../verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a></li>
+                    <li><a href="../verification.html" class="transition hover:text-teal-700">Verification</a></li>
+                    <li><a href="index.html" class="transition hover:text-teal-700">Insights</a></li>
+                    <li><a href="../contact.html" class="transition hover:text-teal-700">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Contact</h3>
+                <div class="mt-5 space-y-4 text-sm text-slate-700 md:flex md:flex-col md:items-end">
+                    <a href="mailto:info@chinapartnerhub.com" class="transition hover:text-teal-700">info@chinapartnerhub.com</a>
+                    <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="transition hover:text-teal-700">+86 180 0545 5057</a>
+                    <p><a href="../privacy.html" class="transition hover:text-teal-700">Privacy</a> / <a href="../terms.html" class="transition hover:text-teal-700">Terms</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,5 +3,5 @@ Allow: /
 
 Sitemap: https://chinapartnerhub.com/sitemap.xml
 
-# LLMs.txt — AI discovery file for LLMs, ChatGPT, Google SGE
-LLMs: https://chinapartnerhub.com/llms.txt
+# AI and answer-engine summary
+# https://chinapartnerhub.com/llms.txt

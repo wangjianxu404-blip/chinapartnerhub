@@ -1,0 +1,15 @@
+{
+  "name": "China Partner Hub",
+  "short_name": "CPH",
+  "icons": [
+    {
+      "src": "/brand-icon.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#13232c",
+  "background_color": "#f8f4ec",
+  "display": "standalone"
+}
