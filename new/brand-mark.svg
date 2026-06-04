@@ -1,0 +1,15 @@
+<svg width="700" height="130" viewBox="0 0 700 130" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">China Partner Hub logo</title>
+  <desc id="desc">China Partner Hub CH monogram wordmark</desc>
+  <rect width="700" height="130" fill="#F8F4EC"/>
+  <rect x="3" y="3" width="128" height="124" rx="30" fill="#FFFFFF" stroke="#D7B98A" stroke-width="4"/>
+  <path d="M22 65C22 36.8 44.8 14 73 14H90V43H73C61.2 43 51 52.4 51 65C51 77.6 61.2 87 73 87H91V116H73C44.8 116 22 93.2 22 65Z" fill="#0E3556"/>
+  <path d="M78 11H105V54H130V83H105V119H78V11Z" fill="#0CA8A2"/>
+  <path d="M105 83H124V104H105V83Z" fill="#0E3556"/>
+  <path d="M105 11H130V54H105V11Z" fill="#0CA8A2"/>
+  <text x="151" y="22" fill="#5B6971" font-family="Public Sans, Arial, sans-serif" font-size="13" font-weight="900" letter-spacing="4.4">ON-THE-GROUND CHINA SOURCING PARTNER</text>
+  <text x="151" y="72" fill="#0E3556" font-family="Public Sans, Arial, sans-serif" font-size="43" font-weight="950" letter-spacing="4.2">CHINA</text>
+  <text x="350" y="72" fill="#0CA8A2" font-family="Public Sans, Arial, sans-serif" font-size="43" font-weight="950" letter-spacing="4.2">PARTNER</text>
+  <text x="151" y="111" fill="#0E3556" font-family="Public Sans, Arial, sans-serif" font-size="31" font-weight="950" letter-spacing="3.5">HUB</text>
+  <path d="M151 123H626" stroke="#D7B98A" stroke-width="4" stroke-linecap="round"/>
+</svg>

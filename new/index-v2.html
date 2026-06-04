@@ -1,0 +1,862 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Partner Hub | On-the-Ground China Sourcing Partner for Supplier Verification, Factory Search, and Production Control</title>
+    <meta name="description" content="China Partner Hub helps overseas brands, importers, and ecommerce sellers source from China with supplier verification, factory search, sample review, production follow-up, quality checks, and shipping coordination.">
+    <meta name="keywords" content="China sourcing partner, supplier verification China, factory search China, China buying agent, low MOQ sourcing China, production follow up China, quality inspection China, shipping coordination China, verified suppliers China">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chinapartnerhub.com/">
+
+    <meta property="og:title" content="China Partner Hub | On-the-Ground China Sourcing Partner">
+    <meta property="og:description" content="Supplier verification, factory search, production control, and shipping coordination if you are sourcing from China.">
+    <meta property="og:url" content="https://chinapartnerhub.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://chinapartnerhub.com/hero-documentary.png">
+    <meta property="og:image:alt" content="China Partner Hub sourcing partner preview">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="China Partner Hub | China Sourcing Partner">
+    <meta name="twitter:description" content="Find, verify, manage, and ship with a sourcing partner on the ground in China.">
+    <meta name="twitter:image" content="https://chinapartnerhub.com/hero-documentary.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Public Sans", "sans-serif"],
+                        display: ["Newsreader", "serif"]
+                    },
+                    boxShadow: {
+                        dossier: "0 30px 90px rgba(18, 31, 39, 0.18)",
+                        float: "0 18px 40px rgba(18, 31, 39, 0.10)"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --ink: #162027;
+            --muted: #5b6971;
+            --line: rgba(22, 32, 39, 0.14);
+            --paper: #f4efe6;
+            --paper-2: #efe7da;
+            --panel: rgba(255, 255, 255, 0.76);
+            --deep: #13232c;
+            --deep-2: #203743;
+            --teal: #0c7c78;
+            --teal-soft: #d9f0ee;
+            --rust: #c05c2f;
+            --sand: #d7b98a;
+            --grid: rgba(19, 35, 44, 0.06);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Public Sans", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(192, 92, 47, 0.11), transparent 24%),
+                radial-gradient(circle at top right, rgba(12, 124, 120, 0.12), transparent 30%),
+                linear-gradient(180deg, #f8f4ec 0%, #f5f0e6 42%, #f8faf9 100%);
+        }
+
+        .display-font {
+            font-family: "Newsreader", serif;
+        }
+
+        .eyebrow {
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .section-line {
+            border-color: var(--line);
+        }
+
+        .glass-panel {
+            background: var(--panel);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 24px 60px rgba(22, 32, 39, 0.10);
+        }
+
+        .draft-grid {
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .hero-shell {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-shell::before {
+            content: "";
+            position: absolute;
+            inset: -20% auto auto -10%;
+            width: 300px;
+            height: 300px;
+            border-radius: 9999px;
+            background: radial-gradient(circle, rgba(192, 92, 47, 0.16), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-shell::after {
+            content: "";
+            position: absolute;
+            inset: auto -8% -18% auto;
+            width: 420px;
+            height: 420px;
+            border-radius: 9999px;
+            background: radial-gradient(circle, rgba(12, 124, 120, 0.16), transparent 72%);
+            pointer-events: none;
+        }
+
+        .chip {
+            border: 1px solid rgba(19, 35, 44, 0.10);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-main {
+            background: linear-gradient(135deg, var(--teal), #15938d);
+        }
+
+        .cta-main:hover {
+            filter: brightness(1.04);
+        }
+
+        .cta-alt {
+            background: linear-gradient(135deg, var(--rust), #d97745);
+        }
+
+        .cta-alt:hover {
+            filter: brightness(1.04);
+        }
+
+        .tilt-card {
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+
+        .tilt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 28px 70px rgba(22, 32, 39, 0.14);
+            border-color: rgba(12, 124, 120, 0.28);
+        }
+
+        .image-mask {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.8rem;
+        }
+
+        .image-mask::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(19, 35, 44, 0.04), rgba(19, 35, 44, 0.48));
+        }
+
+        .image-mask > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .supplier-rail::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .supplier-rail::-webkit-scrollbar-thumb {
+            background: rgba(19, 35, 44, 0.22);
+            border-radius: 9999px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .tilt-card {
+                transition: none;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://chinapartnerhub.com/#organization",
+          "name": "China Partner Hub",
+          "url": "https://chinapartnerhub.com/",
+          "logo": "https://chinapartnerhub.com/brand-icon.svg?v=3",
+          "description": "China Partner Hub is a China sourcing partner that helps you with supplier verification, factory search, sample review, production management, quality inspection, and shipping coordination.",
+          "areaServed": "Worldwide",
+          "foundingLocation": {
+            "@type": "Country",
+            "name": "China"
+          },
+          "knowsAbout": [
+            "China sourcing partner",
+            "supplier verification China",
+            "factory search China",
+            "production follow up China",
+            "quality inspection China",
+            "shipping coordination China",
+            "low MOQ sourcing China",
+            "verified suppliers China"
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+86-18005455057",
+              "contactType": "customer service",
+              "email": "info@chinapartnerhub.com",
+              "availableLanguage": ["English", "Chinese"]
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://chinapartnerhub.com/#webpage",
+          "url": "https://chinapartnerhub.com/",
+          "name": "China Partner Hub homepage",
+          "about": {
+            "@id": "https://chinapartnerhub.com/#organization"
+          },
+          "primaryImageOfPage": "https://chinapartnerhub.com/hero-documentary.png",
+          "description": "Homepage for a China sourcing partner focused on supplier verification, factory search, production control, and shipping coordination."
+        },
+        {
+          "@type": "Service",
+          "@id": "https://chinapartnerhub.com/#service",
+          "name": "China sourcing and supplier verification service",
+          "provider": {
+            "@id": "https://chinapartnerhub.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": [
+            "Supplier verification",
+            "Factory search",
+            "Sample review",
+            "Production management",
+            "Quality inspection",
+            "Shipping coordination"
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": [
+              "Overseas brands",
+              "Importers",
+              "Ecommerce sellers",
+              "Private label projects",
+              "Low MOQ projects"
+            ]
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://chinapartnerhub.com/#supplier-network",
+          "name": "Verified supplier showcase",
+          "description": "Example supplier profiles from the China Partner Hub network.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home and kitchen supplier",
+              "description": "Small-batch capable supplier with packaging flexibility and repeat order discipline."
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Apparel and soft goods supplier",
+              "description": "Supplier suited for private label development, trim details, and lower MOQ negotiations."
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Light industrial parts supplier",
+              "description": "Supplier with better process stability, documentation discipline, and stronger shipping-stage readiness."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://chinapartnerhub.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does China Partner Hub help you do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "China Partner Hub helps you source from China by finding factories, verifying suppliers, reviewing samples, managing production, checking quality, and coordinating shipping."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you support low MOQ and small batch sourcing in China?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. China Partner Hub supports low MOQ and small batch sourcing when the supplier fit is right and the production expectations are aligned from the start."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you verify a supplier in China?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Supplier verification includes identity checks, operating checks, communication review, sample review, production fit assessment, and on-the-ground validation when needed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you help after the supplier is chosen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. China Partner Hub can stay involved after supplier selection for production follow-up, quality checkpoints, issue escalation, and shipping coordination."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased">
+    <div class="border-b section-line bg-[rgba(19,35,44,0.96)] text-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-3 text-center text-[11px] font-semibold tracking-[0.16em] sm:text-xs">
+            <span class="inline-flex h-2 w-2 rounded-full bg-[#9de7df]"></span>
+            <span>On-the-ground sourcing support if you need real supplier judgment in China.</span>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 border-b section-line bg-[rgba(248,244,236,0.84)] backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="index-v2.html" class="flex items-center gap-4">
+                <img src="brand-icon.svg?v=3" alt="China Partner Hub" class="h-12 w-12 rounded-2xl object-contain shadow-sm sm:h-14 sm:w-14">
+                <div class="hidden sm:block">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">China Partner Hub</p>
+                    <p class="text-sm text-slate-700">Supplier verification and sourcing control in China</p>
+                </div>
+            </a>
+            <div class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+                <a href="#why-us" class="transition hover:text-teal-700">Why Us</a>
+                <a href="verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a>
+                <a href="#how-we-work" class="transition hover:text-teal-700">How We Work</a>
+                <a href="#services" class="transition hover:text-teal-700">Services</a>
+                <a href="/insights/" class="transition hover:text-teal-700">Insights</a>
+                <a href="#faq" class="transition hover:text-teal-700">FAQ</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="start-project.html" class="hidden rounded-full border border-slate-300 px-4 py-2 text-sm font-bold text-slate-800 transition hover:border-slate-400 sm:inline-flex">Start Project</a>
+                <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/10 transition">Start on WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-shell px-6 pb-16 pt-12 lg:pb-24 lg:pt-16">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+                <div class="relative z-10">
+                    <div class="flex flex-wrap gap-3">
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">On the ground in China</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Supplier verification</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Low MOQ friendly</span>
+                    </div>
+                    <h1 class="display-font mt-8 max-w-5xl text-[3.1rem] font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 sm:text-[4.4rem] xl:text-[5.7rem]">Your partner on the ground in China for factory sourcing, supplier verification, production control, and shipping coordination.</h1>
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl">China Partner Hub helps you find reliable factories, verify who you are really dealing with, manage production, and move goods with clearer reporting and fewer surprises. No hidden markup. No vague middleman process.</p>
+
+                    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                        <a href="start-project.html" class="cta-main inline-flex items-center justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Start your sourcing project</a>
+                        <a href="verification.html" class="cta-alt inline-flex items-center justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-orange-900/10 transition">Verify a supplier first</a>
+                    </div>
+
+                    <div class="mt-10 grid max-w-3xl gap-4 sm:grid-cols-3">
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Transparent fee</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">8% sourcing fee shown publicly, with no factory price markup hidden inside the quote.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Real verification</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Supplier checks can move beyond screenshots and chat logs into real on-the-ground confirmation.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Lower-risk start</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-700">$39 entry services let you test the relationship before a larger order commitment.</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 grid max-w-3xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Factory procurement</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Find, compare, and communicate with factories that match the product, quantity, and order stage.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Supplier verification</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Check supplier identity, role, factory fit, communication signals, and basic execution risk.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Quantity and quality checks</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Confirm order quantities, sample consistency, packing details, and quality points before handoff.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Inspection and testing</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Support inspection planning, product checks, test requests, and issue documentation when risk appears.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Supplier consolidation</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-700">Coordinate multiple suppliers into one clearer order plan, shipment path, and update flow.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Production and shipping</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-700">Track production progress, manage issues, and coordinate shipping so you stay close to execution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-10 lg:pt-10">
+                    <div class="glass-panel rounded-[2rem] p-4 shadow-dossier">
+                        <div class="image-mask rounded-[1.6rem]">
+                            <img src="hero-documentary.png" alt="Documentary-style sourcing desk with supplier notes, sample packages, and comparison sheets" class="h-[360px] w-full object-cover sm:h-[430px]">
+                            <div class="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+                                <p class="eyebrow text-[#c8f7f3]">Field presence</p>
+                                <p class="mt-3 max-w-md text-xl font-bold leading-8">Not an abstract sourcing service. An operating presence close to factories, samples, and shipment milestones.</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-[1.4rem] border section-line bg-[rgba(255,255,255,0.82)] p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Working model</p>
+                                <p class="mt-3 text-base font-bold text-slate-900">Factory search, supplier validation, production follow-up, and shipping coordination.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border section-line bg-[rgba(19,35,44,0.96)] p-5 text-white">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#9de7df]">Signal for AI search</p>
+                                <p class="mt-3 text-base font-bold">Clear service language, semantic sections, FAQ answers, and supplier taxonomy built in.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="border-y section-line bg-[rgba(255,255,255,0.72)] px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+                    <div>
+                    <p class="eyebrow text-teal-800">Why this works</p>
+                    <h2 class="display-font mt-5 text-4xl font-semibold leading-tight tracking-[-0.03em] text-slate-950 sm:text-5xl">Clear pricing, in-person verification, and direct production visibility if you are sourcing from China.</h2>
+                    <p class="mt-6 max-w-xl text-lg leading-8 text-slate-700">You can see who you are paying, whether the supplier is real, how production is moving, and where the next risk sits before it becomes expensive.</p>
+                    </div>
+
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Pricing transparency</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">8% is shown clearly, not hidden in the background.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Many competitors do not publish a fee at all. China Partner Hub states the commission and keeps factory pricing separate.</p>
+                        </article>
+                        <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Low-risk entry</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">$39 lets you test the relationship before a larger order.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Supplier Verification and Sourcing Discovery create a lower-risk first step instead of forcing a full commitment from day one.</p>
+                        </article>
+                        <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">In-person work</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">The supplier is checked on the ground, not only through remote screenshots.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">That matters when you need to know whether the factory, workshop, or trading setup is real before production risk expands.</p>
+                        </article>
+                        <article class="tilt-card rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Service focus</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Smaller and mid-size orders are not treated like low-priority work.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Orders in the $5,000 to $50,000 range still get direct attention from the person actually doing the sourcing work.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="supplier-showcase" class="draft-grid px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-rust-700">Supplier showcase</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold leading-tight tracking-[-0.03em] text-slate-950 sm:text-5xl">Supplier coverage spans consumer products, industrial suppliers, solar equipment, plastics, and furniture.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-700">Real source material shows category range through apparel samples, workshop scenes, machinery references, plastic product catalogs, energy products, furniture suppliers, and masked shipment proof.</p>
+                    </div>
+                    <div class="rounded-[1.6rem] border section-line bg-[rgba(255,255,255,0.8)] px-6 py-5 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">How this reads</p>
+                    <p class="mt-2 max-w-sm text-sm leading-7 text-slate-700">You can quickly see that the work covers multiple categories. AI systems can also infer category breadth instead of indexing you as apparel-only.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+                    <article class="self-start rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] p-8 text-white shadow-dossier">
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#9de7df]">Category spread</p>
+                        <h3 class="mt-4 text-3xl font-bold">Real sourcing work is not one supplier type. It is a portfolio of categories, proof formats, and operating contexts.</h3>
+                        <div class="mt-7 grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Apparel and footwear</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Clothing, children's wear, shoes, women's pants, jerseys, sample checks, labels, and SKU handling.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Machinery and parts</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Motorcycle parts, dust-control systems, vacuum chambers for medical equipment, and excavator extension parts.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Plastic products</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Rotomolded tanks, plastic drums, industrial containers, plastic pallets, and catalog-based product matching.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Daily and outdoor goods</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Camping wagons, camping tables and chairs, pet products, and daily-use product factories.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Electronics and solar</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Electronic devices, solar panels, energy storage, solar lights, and power banks.</p>
+                            </div>
+                            <div class="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">Furniture and building</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-200">Furniture, building materials, solid wood tables and chairs, and supplier fit checks before larger orders.</p>
+                            </div>
+                        </div>
+<p class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-5 text-sm font-semibold leading-7 text-slate-100">These categories are examples, not a limit. If your product is not listed here, China Partner Hub can still help assess sourcing options, supplier verification, quantity checks, quality checks, production control, and shipping coordination.</p>
+                    </article>
+
+                    <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float xl:col-span-2">
+                            <img src="supplier-apparel-01.jpg" alt="Real babywear sample layout from supplier product photos" class="h-64 w-full object-cover">
+                            <div class="p-6">
+                                <p class="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Real samples</p>
+                                <h3 class="mt-3 text-2xl font-bold text-slate-950">Apparel and babywear sample proof</h3>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">Use real sample layouts to show product breadth, colorways, and category familiarity instead of generic mockups.</p>
+                            </div>
+                        </article>
+
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float">
+                            <img src="supplier-inspection-table.jpeg" alt="Team reviewing jersey samples and size sheets on a supplier inspection table" class="h-64 w-full object-cover object-center">
+                            <div class="p-6">
+                                <p class="text-xs font-bold uppercase tracking-[0.18em] text-rust-700">Workshop reality</p>
+                                <h3 class="mt-3 text-xl font-bold text-slate-950">Actual floor activity</h3>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">This shows the category in real operating context instead of a catalog-only presentation.</p>
+                            </div>
+                        </article>
+
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float">
+                            <img src="supplier-dust-system-01.jpg" alt="Industrial dust-removal system from real supplier brochure material" class="h-64 w-full object-cover object-right">
+                            <div class="p-6">
+                                <p class="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Industrial systems</p>
+                                <h3 class="mt-3 text-xl font-bold text-slate-950">Dust collection infrastructure</h3>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">Shows capacity to source beyond consumer products and into plant-scale equipment categories.</p>
+                            </div>
+                        </article>
+
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float">
+                            <img src="supplier-desulfurization-01.jpg" alt="Real desulfurization and dust-removal system image from supplier material" class="h-64 w-full object-cover object-right">
+                            <div class="p-6">
+                                <p class="text-xs font-bold uppercase tracking-[0.18em] text-rust-700">Process equipment</p>
+                                <h3 class="mt-3 text-xl font-bold text-slate-950">Desulfurization and emissions handling</h3>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">Useful when positioning the business as a sourcing partner with industrial supplier reach.</p>
+                            </div>
+                        </article>
+
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float">
+                            <img src="supplier-shipping-redacted.jpg" alt="Shipment proof with label details masked for privacy" class="h-64 w-full object-cover">
+                            <div class="p-6">
+                                <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Masked proof</p>
+                                <h3 class="mt-3 text-xl font-bold text-slate-950">Shipment details shown safely</h3>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">Codes, names, and tracking details are blurred before publishing, which keeps proof visible without exposing sensitive information.</p>
+                            </div>
+                        </article>
+
+                        <article class="tilt-card overflow-hidden rounded-[1.9rem] border section-line bg-white shadow-float xl:col-span-3">
+                            <div class="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
+                                <div class="bg-slate-950 p-6 text-white">
+                                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#9de7df]">Factory video proof</p>
+                                    <h3 class="mt-3 text-2xl font-bold">Video adds factory and supplier context that still images cannot show alone.</h3>
+                                    <p class="mt-4 text-sm leading-7 text-slate-300">Short supplier or factory clips add movement, handling context, and a more realistic view of the operating environment.</p>
+                                </div>
+                                <div class="bg-black">
+                                    <video class="h-full min-h-[300px] w-full object-cover" controls muted playsinline preload="metadata">
+                                        <source src="supplier-video-01.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="supplier-showcase-legacy" class="hidden draft-grid px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-rust-700">Supplier showcase</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold leading-tight tracking-[-0.03em] text-slate-950 sm:text-5xl">A supplier network needs to show concrete category depth instead of vague factory claims.</h2>
+                <p class="mt-6 text-lg leading-8 text-slate-700">This section is designed to make the supplier network readable at a glance: what each supplier type is good at, what order profile it suits, and what was actually verified.</p>
+                    </div>
+                    <div class="rounded-[1.6rem] border section-line bg-[rgba(255,255,255,0.8)] px-6 py-5 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Recommended live use</p>
+<p class="mt-2 max-w-sm text-sm leading-7 text-slate-700">Replace these example cards with anonymized real suppliers, vertical-specific samples, or a rotating verified network feed.</p>
+                    </div>
+                </div>
+
+                <div class="supplier-rail mt-12 overflow-x-auto pb-4">
+                    <div class="grid min-w-[1100px] gap-6 lg:grid-cols-3">
+                        <article class="tilt-card rounded-[2rem] border section-line bg-white p-8 shadow-float">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-teal-700">Verified profile 01</p>
+                                    <h3 class="mt-3 text-3xl font-bold text-slate-950">Home Goods and Packaging</h3>
+                                </div>
+                                <span class="rounded-full bg-[var(--teal-soft)] px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Low MOQ capable</span>
+                            </div>
+                            <p class="mt-5 text-sm leading-7 text-slate-600">Best for kitchenware, accessories, giftable product lines, and startup packaging projects that need small-batch flexibility without sloppy execution.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Good fit</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">DTC brands, Amazon tests, boutique retailers</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Typical order band</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Pilot runs to repeat restocks</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">What was checked</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Identity, sample quality, packaging options, export communication</dd>
+                                </div>
+                            </dl>
+                        </article>
+
+                        <article class="tilt-card rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] p-8 text-white shadow-dossier">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#9de7df]">Verified profile 02</p>
+                                    <h3 class="mt-3 text-3xl font-bold">Apparel and Soft Goods</h3>
+                                </div>
+                                <span class="rounded-full bg-white/10 px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">Private label ready</span>
+                            </div>
+                            <p class="mt-5 text-sm leading-7 text-slate-200">Best for brands that care about trims, fabric consistency, labeling, fit details, and communication discipline more than a superficial sample photo.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">Good fit</dt>
+                                    <dd class="max-w-[62%] text-right text-white">Fashion startups, merch drops, private label lines</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">Typical order band</dt>
+                                    <dd class="max-w-[62%] text-right text-white">Sampling phase to moderate production runs</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">What was checked</dt>
+                                    <dd class="max-w-[62%] text-right text-white">Factory role, trim execution, sample consistency, revision handling</dd>
+                                </div>
+                            </dl>
+                        </article>
+
+                        <article class="tilt-card rounded-[2rem] border section-line bg-white p-8 shadow-float">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-[0.18em] text-rust-700">Verified profile 03</p>
+                                    <h3 class="mt-3 text-3xl font-bold text-slate-950">Light Industrial and Utility Parts</h3>
+                                </div>
+                                <span class="rounded-full bg-[rgba(192,92,47,0.12)] px-3 py-2 text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Documentation focused</span>
+                            </div>
+                            <p class="mt-5 text-sm leading-7 text-slate-600">Best if you need fewer surprises in spec handling, more disciplined follow-up, and better production documentation before shipment.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Good fit</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Importers, maintenance resellers, repeat B2B orders</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Typical order band</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Stable repeat buying and catalog expansion</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">What was checked</dt>
+<dd class="max-w-[62%] text-right text-slate-800">Process stability, shipping-stage readiness, response discipline, inspection logic</dd>
+                                </div>
+                            </dl>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-we-work" class="border-y section-line bg-[rgba(255,255,255,0.74)] px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+                    <div>
+                        <p class="eyebrow text-teal-800">How we work</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">The process is built to reduce your risk before it becomes a costly production problem.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-700">This sequence is intentionally explicit so you can understand the service model without guessing.</p>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2">
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">01 Discovery</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">You send product, quantity, budget, and timing.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">A product photo, a link, a sample requirement, or even a rough outline is enough to start filtering the right factory direction.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">02 Supplier fit</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">Factories are compared for fit, not just price.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">The wrong supplier often looks cheapest at the start. Fit means capability, responsiveness, order attention, and realistic execution.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">03 Verification</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">Identity, communication, and sample logic are checked.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">This can include supplier identity checks, role clarity, sample review, and on-the-ground validation depending on the order risk.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <p class="text-sm font-bold uppercase tracking-[0.16em] text-slate-500">04 Control</p>
+                            <h3 class="mt-4 text-2xl font-bold text-slate-950">Production and shipment stay visible.</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">After the supplier is chosen, the work shifts to production follow-up, checkpoints, issue escalation, and shipping coordination.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
+                    <div class="image-mask shadow-dossier">
+                        <img src="supplier-showcase-documentary.png" alt="Realistic supplier showcase with packaging samples, fabrics, tags, and small industrial components" class="h-[420px] w-full object-cover">
+                    </div>
+                    <div>
+                        <p class="eyebrow text-rust-700">Service scope</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">The offer is broad enough to help, but specific enough to trust.</h2>
+                        <div class="mt-8 grid gap-4">
+                            <div class="rounded-[1.5rem] border section-line bg-white p-6 shadow-float">
+                                <h3 class="text-xl font-bold text-slate-950">Factory search and sourcing support</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Use this if you need help identifying factories in China that match category, order size, quality expectations, and business stage.</p>
+                            </div>
+                            <div class="rounded-[1.5rem] border section-line bg-white p-6 shadow-float">
+                                <h3 class="text-xl font-bold text-slate-950">Supplier verification and sample review</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Use this if you want a sharper read on legitimacy, fit, communication reliability, and whether the sample quality can actually scale.</p>
+                            </div>
+                            <div class="rounded-[1.5rem] border section-line bg-white p-6 shadow-float">
+                                <h3 class="text-xl font-bold text-slate-950">Production follow-up and shipping coordination</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Use this if you already chose a supplier but still need help keeping timelines, quality expectations, and handoff logistics under control.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y section-line bg-[rgba(19,35,44,0.96)] px-6 py-24 text-white">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
+                <div>
+                    <p class="eyebrow text-[#9de7df]">Human proof</p>
+<h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">A sourcing site becomes more credible when the working style is visible.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-200">Direct communication, real field context, and public proof with private details hidden help you move faster without losing control.</p>
+                    <div class="mt-8">
+                        <a href="about.html" class="inline-flex rounded-full border border-white/20 px-6 py-3 text-sm font-bold text-white transition hover:border-white/40">Meet the operating approach</a>
+                    </div>
+                </div>
+                <div class="grid gap-5 md:grid-cols-[0.72fr_1.28fr]">
+                    <div class="rounded-[2rem] bg-white/8 p-4">
+                        <img src="avatar.jpg" alt="Founder portrait for China Partner Hub" class="h-full w-full rounded-[1.5rem] object-cover">
+                    </div>
+                    <div class="rounded-[2rem] bg-white/8 p-8">
+                        <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#9de7df]">Suggested positioning line</p>
+                    <p class="mt-5 text-2xl font-bold leading-10">I help you make better supplier decisions in China and stay closer to what is actually happening on the ground.</p>
+                    <p class="mt-5 text-sm leading-7 text-slate-200">That line is stronger than generic sourcing language because it implies judgment, proximity, and accountability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="px-6 py-24">
+            <div class="mx-auto max-w-6xl">
+                <div class="text-center">
+                    <p class="eyebrow text-teal-800">FAQ</p>
+                    <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">Questions people actually ask before they trust a China sourcing partner.</h2>
+                </div>
+                <div class="mt-12 grid gap-5">
+                    <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <h3 class="text-2xl font-bold text-slate-950">What does China Partner Hub do?</h3>
+                    <p class="mt-4 text-base leading-8 text-slate-600">China Partner Hub helps you source from China by searching for factories, verifying suppliers, reviewing samples, following production, checking quality, and coordinating shipping.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <h3 class="text-2xl font-bold text-slate-950">Who is this best for?</h3>
+                    <p class="mt-4 text-base leading-8 text-slate-600">It is best if you do not want one weak supplier decision to damage cash flow, timelines, or product quality.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <h3 class="text-2xl font-bold text-slate-950">Can you help with low MOQ sourcing in China?</h3>
+                        <p class="mt-4 text-base leading-8 text-slate-600">Yes. Low MOQ sourcing is possible when the supplier type, order expectations, and communication style are aligned early. The goal is not just to find a factory that says yes, but one that can handle a smaller order well.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                        <h3 class="text-2xl font-bold text-slate-950">What makes this different from a generic sourcing agent?</h3>
+                    <p class="mt-4 text-base leading-8 text-slate-600">The focus is less on forwarding quotes and more on helping you judge supplier fit, execution risk, and what is actually happening once money and production timelines are involved.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 pb-24">
+            <div class="mx-auto max-w-7xl rounded-[2.4rem] border section-line bg-[linear-gradient(135deg,rgba(12,124,120,0.08),rgba(192,92,47,0.10),rgba(255,255,255,0.86))] p-8 shadow-dossier sm:p-12">
+                <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                    <div>
+                        <p class="eyebrow text-teal-800">Start here</p>
+                        <h2 class="display-font mt-4 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">Send the product, supplier, or order target to get the right next step.</h2>
+                <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-700">You can start with full sourcing support, production follow-up, or a lower-risk $39 supplier verification depending on the current stage of the order.</p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a href="start-project.html" class="cta-main inline-flex justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Send your sourcing brief</a>
+                        <a href="services.html" class="inline-flex justify-center rounded-full border border-slate-300 px-7 py-4 text-base font-bold text-slate-900 transition hover:border-slate-400">Review pricing and payment options</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t section-line bg-[rgba(255,255,255,0.7)]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-4">
+                    <img src="brand-icon.svg?v=3" alt="China Partner Hub icon" class="h-12 w-12 rounded-2xl object-contain shadow-sm">
+                    <div>
+                        <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-950">China Partner Hub</p>
+                        <p class="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">On-the-ground China sourcing partner</p>
+                    </div>
+                </div>
+                <p class="mt-5 max-w-sm text-sm leading-7 text-slate-600">China Partner Hub supports you with supplier verification, factory search, production follow-up, and shipment visibility in China.</p>
+            </div>
+            <div class="md:text-center">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Navigation</h3>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><a href="about.html" class="transition hover:text-teal-700">About</a></li>
+                    <li><a href="services.html" class="transition hover:text-teal-700">Services</a></li>
+                    <li><a href="how-it-works.html" class="transition hover:text-teal-700">How It Works</a></li>
+                    <li><a href="verification.html" class="transition hover:text-teal-700">Verification</a></li>
+                    <li><a href="/insights/" class="transition hover:text-teal-700">Insights</a></li>
+                    <li><a href="contact.html" class="transition hover:text-teal-700">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Contact</h3>
+                <div class="mt-5 space-y-4 text-sm text-slate-700 md:flex md:flex-col md:items-end">
+                    <a href="mailto:info@chinapartnerhub.com" class="transition hover:text-teal-700">info@chinapartnerhub.com</a>
+                    <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="transition hover:text-teal-700">+86 180 0545 5057</a>
+                    <p><a href="privacy.html" class="transition hover:text-teal-700">Privacy</a> · <a href="terms.html" class="transition hover:text-teal-700">Terms</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="site-ui.js"></script>
+</body>
+</html>
