@@ -1,93 +1,117 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chinapartnerhub.com/</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/how-it-works.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/services.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/china-sourcing-agent.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/start-project.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/about.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/verified-suppliers.html</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
         <loc>https://chinapartnerhub.com/verification.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/contact.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/verified-suppliers.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/case-study-factory-price-gap.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/insights/</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/insights/why-cutting-middlemen-isnt-always-the-answer.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://chinapartnerhub.com/insights/low-profile-matters-more-than-big-promises.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://chinapartnerhub.com/insights/check-before-paying.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://chinapartnerhub.com/insights/who-are-you-really-dealing-with.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/insights/supplier-fit-matters-more-than-price.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/insights/product-ideas-everywhere-sourcing-is-hard.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://chinapartnerhub.com/insights/why-i-started-this-work.html</loc>
+        <loc>https://chinapartnerhub.com/insights/check-before-paying.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/insights/china-tea-sourcing-guide-yunnan.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/low-profile-matters-more-than-big-promises.html</loc>
+        <lastmod>2026-06-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/privacy.html</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <loc>https://chinapartnerhub.com/insights/product-ideas-everywhere-sourcing-is-hard.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/terms.html</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <loc>https://chinapartnerhub.com/insights/why-cutting-middlemen-isnt-always-the-answer.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/why-i-started-this-work.html</loc>
+        <lastmod>2026-06-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>

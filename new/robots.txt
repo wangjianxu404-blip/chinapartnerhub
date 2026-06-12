@@ -1,7 +1,24 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Content-Signal: search=yes,ai-input=yes,ai-train=no
+
 Sitemap: https://chinapartnerhub.com/sitemap.xml
 
-# LLMs.txt — AI discovery file for LLMs, ChatGPT, Google SGE
-LLMs: https://chinapartnerhub.com/llms.txt
+# AI and answer-engine summary
+# https://chinapartnerhub.com/llms.txt

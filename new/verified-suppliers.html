@@ -1,572 +1,714 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verified Suppliers | chinapartnerhub.com — Pre-Vetted Chinese Factories</title>
-    <meta name="description" content="Browse our network of 11 verified Chinese factories across 5 categories. Each supplier has been vetted in person — business license, factory floor, samples, and export history checked.">
+    <title>Verified Suppliers | China Partner Hub</title>
+    <meta name="description" content="Example verified supplier profiles from China Partner Hub across apparel, footwear, machinery, plastic products, outdoor goods, electronics, solar products, furniture, and shipping-stage sourcing projects.">
+    <meta name="keywords" content="verified suppliers China, supplier verification China, factory sourcing China, China sourcing partner, apparel supplier China, industrial supplier China, plastic product supplier China, solar product supplier China">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chinapartnerhub.com/verified-suppliers.html">
-    <meta property="og:title" content="Verified Suppliers | chinapartnerhub.com">
-    <meta property="og:description" content="11 pre-vetted Chinese factories across apparel, machinery, electronics, packaging, and hardware. Real verification, not database listings.">
+    <meta property="og:title" content="Verified Suppliers | China Partner Hub">
+    <meta property="og:description" content="Example supplier profiles showing real category range, verification logic, and where each fit is strongest across China sourcing projects.">
     <meta property="og:url" content="https://chinapartnerhub.com/verified-suppliers.html">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="llms" href="/llms.txt">
+    <meta property="og:image" content="https://chinapartnerhub.com/supplier-showcase-documentary.png">
+    <meta property="og:image:alt" content="Verified supplier categories from China Partner Hub">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Verified Suppliers | China Partner Hub">
+    <meta name="twitter:description" content="Example verified supplier profiles across apparel, machinery, plastic products, outdoor goods, electronics, solar products, furniture, and shipping support.">
+    <meta name="twitter:image" content="https://chinapartnerhub.com/supplier-showcase-documentary.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Public Sans", "sans-serif"],
+                        display: ["Newsreader", "serif"]
+                    },
+                    boxShadow: {
+                        dossier: "0 30px 90px rgba(18, 31, 39, 0.18)",
+                        float: "0 18px 40px rgba(18, 31, 39, 0.10)"
+                    }
+                }
+            }
+        };
+    </script>
     <style>
-        .supplier-card {
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        :root {
+            --ink: #162027;
+            --muted: #5b6971;
+            --line: rgba(22, 32, 39, 0.14);
+            --panel: rgba(255, 255, 255, 0.76);
+            --deep: #13232c;
+            --teal: #0c7c78;
+            --teal-soft: #d9f0ee;
+            --rust: #c05c2f;
+            --grid: rgba(19, 35, 44, 0.06);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Public Sans", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(192, 92, 47, 0.11), transparent 24%),
+                radial-gradient(circle at top right, rgba(12, 124, 120, 0.12), transparent 30%),
+                linear-gradient(180deg, #f8f4ec 0%, #f5f0e6 42%, #f8faf9 100%);
+        }
+
+        .display-font { font-family: "Newsreader", serif; }
+        .eyebrow { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 800; }
+        .section-line { border-color: var(--line); }
+        .chip { border: 1px solid rgba(19, 35, 44, 0.10); background: rgba(255, 255, 255, 0.7); }
+        .glass-panel {
+            background: var(--panel);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 24px 60px rgba(22, 32, 39, 0.10);
+        }
+        .draft-grid {
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .cta-main { background: linear-gradient(135deg, var(--teal), #15938d); }
+        .cta-alt { background: linear-gradient(135deg, var(--rust), #d97745); }
+        .cta-main:hover, .cta-alt:hover { filter: brightness(1.04); }
+        .tilt-card {
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .tilt-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 28px 70px rgba(22, 32, 39, 0.14);
+            border-color: rgba(12, 124, 120, 0.28);
+        }
+        .image-mask {
             position: relative;
             overflow: hidden;
+            border-radius: 1.8rem;
         }
-        .supplier-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-        }
-        .supplier-card .color-bar {
+        .image-mask::after {
+            content: "";
             position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(19, 35, 44, 0.04), rgba(19, 35, 44, 0.42));
         }
-        .color-bar.apparel { background: #2563EB; }
-        .color-bar.machinery { background: #059669; }
-        .color-bar.electronics { background: #D97706; }
-        .color-bar.packaging { background: #7C3AED; }
-        .color-bar.home { background: #DC2626; }
-
-        .filter-bar {
+        .image-mask > * { position: relative; z-index: 1; }
+        .proof-rail {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+        }
+        .proof-rail::before,
+        .proof-rail::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+            width: 10%;
+            pointer-events: none;
+        }
+        .proof-rail::before {
+            left: 0;
+            background: linear-gradient(90deg, #13232c, rgba(19, 35, 44, 0));
+        }
+        .proof-rail::after {
+            right: 0;
+            background: linear-gradient(270deg, #13232c, rgba(19, 35, 44, 0));
+        }
+        .proof-track {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
+            width: max-content;
+            gap: 1rem;
+            animation: proof-scroll 44s linear infinite;
         }
-        .filter-btn {
-            padding: 0.5rem 1.25rem;
-            border-radius: var(--radius-full);
-            font-family: var(--font-heading);
-            font-size: var(--text-sm);
-            font-weight: 600;
-            border: 2px solid var(--color-gray-300);
-            background: var(--color-white-pure);
-            color: var(--color-gray-600);
-            cursor: pointer;
-            transition: all var(--transition-fast);
+        .proof-track.reverse {
+            animation-direction: reverse;
+            animation-duration: 54s;
         }
-        .filter-btn:hover {
-            border-color: var(--color-primary);
-            color: var(--color-primary);
+        .proof-rail:hover .proof-track { animation-play-state: paused; }
+        .proof-tile {
+            width: clamp(13rem, 24vw, 22rem);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 1.3rem;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+            flex: 0 0 auto;
         }
-        .filter-btn.active {
-            background: var(--color-primary-soft);
-            border-color: var(--color-primary);
-            color: var(--color-primary);
+        .proof-tile img {
+            height: 13rem;
+            width: 100%;
+            object-fit: cover;
+            display: block;
         }
-
-        .supplier-tag {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            background: var(--color-gray-100);
-            border-radius: var(--radius-full);
-            font-size: var(--text-xs);
-            color: var(--color-gray-600);
-            font-weight: 500;
-        }
-        .category-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.2rem 0.75rem;
-            border-radius: var(--radius-full);
-            font-family: var(--font-heading);
-            font-size: var(--text-xs);
-            font-weight: 700;
+        .proof-tile figcaption {
+            padding: 0.85rem 1rem 1rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            letter-spacing: 0.03em;
         }
-        .category-badge.apparel { background: #DBEAFE; color: #1E40AF; }
-        .category-badge.machinery { background: #D1FAE5; color: #065F46; }
-        .category-badge.electronics { background: #FEF3C7; color: #92400E; }
-        .category-badge.packaging { background: #EDE9FE; color: #5B21B6; }
-        .category-badge.home { background: #FEE2E2; color: #991B1B; }
-
-        .supplier-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+        @keyframes proof-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
         }
-        @media (max-width: 1024px) {
-            .supplier-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 640px) {
-            .supplier-grid { grid-template-columns: 1fr; }
-            .filter-bar { gap: 0.35rem; }
-            .filter-btn { padding: 0.4rem 0.9rem; font-size: 0.75rem; }
-        }
-
-        .supplier-location {
-            font-size: var(--text-sm);
-            color: var(--color-gray-500);
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-        }
-        .supplier-desc {
-            font-size: var(--text-sm);
-            color: var(--color-gray-600);
-            line-height: 1.7;
-        }
-        .verified-check {
-            font-size: var(--text-xs);
-            color: var(--color-gray-400);
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        /* Verification standards section */
-        .verify-standard-card {
-            text-align: center;
-            padding: var(--space-xl);
-            background: var(--color-white-pure);
-            border: 1px solid var(--color-gray-200);
-            border-radius: var(--radius-2xl);
-            transition: all var(--transition-base);
-        }
-        .verify-standard-card:hover {
-            box-shadow: var(--shadow-md);
-        }
-        .verify-icon-circle {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--space-md);
-            font-size: 1.25rem;
+        @media (prefers-reduced-motion: reduce) {
+            .proof-track {
+                animation: none;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                width: auto;
+            }
         }
     </style>
-</head>
-<body>
-
-<!-- Trust Bar -->
-<div style="background:var(--color-navy);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:0.02em;">
-    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:8px;animation:pulse-glow 2s infinite;"></span>
-    Every supplier listed here has been vetted by us in person. No database scrapes. No unverified listings.
-</div>
-
-<!-- Navigation -->
-<nav class="nav" id="navbar">
-    <div class="container">
-        <a href="index.html" class="nav-logo"><img src="logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
-        <ul class="nav-links">
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="services.html">Services & Pricing</a></li>
-            <li><a href="verified-suppliers.html" class="active">Verified Suppliers</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="insights/">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="how-it-works.html">How It Works</a>
-    <a href="services.html">Services & Pricing</a>
-    <a href="verified-suppliers.html">Verified Suppliers</a>
-    <a href="about.html">About</a>
-    <a href="insights/">Insights</a>
-    <a href="contact.html" class="btn btn-primary btn-lg" style="margin-top:1rem;">Get Started</a>
-</div>
-
-<!-- Hero -->
-<section class="section" style="background:var(--color-white);text-align:center;">
-    <div class="container container-narrow">
-        <span class="badge badge-green" style="margin-bottom:1rem;">Verified Supplier Network</span>
-        <h1>11 factories we've vetted with our own eyes.</h1>
-        <p style="color:var(--color-gray-600);font-size:1.125rem;max-width:700px;margin:1rem auto 0;">Every supplier listed below has passed our in-person verification. We've walked their factory floors, checked their licenses, inspected their samples, and confirmed their export capability. These aren't Alibaba profiles — they're production partners we know and trust.</p>
-    </div>
-</section>
-
-<!-- Trust indicators -->
-<section style="padding:3rem 0;background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);border-bottom:1px solid var(--color-gray-200);">
-    <div class="container">
-        <div class="grid-4">
-            <div class="text-center">
-                <div style="font-size:1.5rem;color:#2563EB;margin-bottom:0.5rem;"><i class="fa-solid fa-building-circle-check"></i></div>
-                <strong style="font-size:0.9rem;">License Verified</strong>
-                <p style="font-size:0.8rem;color:var(--color-gray-500);">Business license & registration cross-checked against government databases</p>
-            </div>
-            <div class="text-center">
-                <div style="font-size:1.5rem;color:#059669;margin-bottom:0.5rem;"><i class="fa-solid fa-eye"></i></div>
-                <strong style="font-size:0.9rem;">On-Site Visited</strong>
-                <p style="font-size:0.8rem;color:var(--color-gray-500);">We walk the factory floor — real equipment, real workers, real production lines</p>
-            </div>
-            <div class="text-center">
-                <div style="font-size:1.5rem;color:#D97706;margin-bottom:0.5rem;"><i class="fa-solid fa-boxes-stacked"></i></div>
-                <strong style="font-size:0.9rem;">Samples Checked</strong>
-                <p style="font-size:0.8rem;color:var(--color-gray-500);">Physical samples inspected on-site for material quality, workmanship, and finishing</p>
-            </div>
-            <div class="text-center">
-                <div style="font-size:1.5rem;color:#7C3AED;margin-bottom:0.5rem;"><i class="fa-solid fa-ship"></i></div>
-                <strong style="font-size:0.9rem;">Export Ready</strong>
-                <p style="font-size:0.8rem;color:var(--color-gray-500);">Export history, certifications, and international capability confirmed</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Verification in Action — Real Photos -->
-<section style="padding:3rem 0;background:var(--color-white);border-top:1px solid var(--color-gray-100);">
-    <div class="container">
-        <div class="text-center mb-xl">
-            <span class="badge badge-blue" style="margin-bottom:0.75rem;">Verification in Action</span>
-            <h2 style="font-size:1.75rem;">This is what real verification looks like</h2>
-            <p style="color:var(--color-gray-500);max-width:600px;margin:0.5rem auto 0;">Not stock photos. Not Alibaba catalog shots. Real photos from our factory visits.</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;">
-                <img src="factory-floor-1.jpg" alt="Factory production line" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;">
-                <img src="factory-floor-3.jpg" alt="Factory quality inspection" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;">
-                <img src="factory-floor-4.jpg" alt="Warehouse and production" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;">
-                <img src="factory-floor-2.jpg" alt="Sample inspection" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Products We've Sourced -->
-<section style="padding:3rem 0;background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);">
-    <div class="container">
-        <div class="text-center mb-xl">
-            <span class="badge badge-gold" style="margin-bottom:0.75rem;">Products We've Sourced</span>
-            <h2 style="font-size:1.75rem;">Real products. Real production. Real delivery.</h2>
-            <p style="color:var(--color-gray-500);max-width:600px;margin:0.5rem auto 0;">Not catalog photos. These are actual products we've sourced, inspected, and delivered for our clients.</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;background:var(--color-white-pure);">
-                <img src="kids-wear-1.jpg" alt="Children's clothing sourced from China" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;background:var(--color-white-pure);">
-                <img src="kids-wear-2.jpg" alt="Kids apparel production sample" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;background:var(--color-white-pure);">
-                <img src="kids-wear-3.jpg" alt="Children's wear quality inspection" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:3/4;background:var(--color-white-pure);">
-                <img src="kids-wear-4.jpg" alt="Kids clothing production batch" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Supplier Grid -->
-<section class="section" style="background:var(--color-white);">
-    <div class="container" style="max-width:var(--content-max);">
-
-        <!-- Category Filter -->
-        <div class="filter-bar" id="filter-bar">
-            <button class="filter-btn active" onclick="filterSuppliers('all')" data-category="all">All Categories</button>
-            <button class="filter-btn" onclick="filterSuppliers('apparel')" data-category="apparel">Apparel & Textiles</button>
-            <button class="filter-btn" onclick="filterSuppliers('machinery')" data-category="machinery">Machinery & Parts</button>
-            <button class="filter-btn" onclick="filterSuppliers('electronics')" data-category="electronics">Electronics</button>
-            <button class="filter-btn" onclick="filterSuppliers('packaging')" data-category="packaging">Packaging & Printing</button>
-            <button class="filter-btn" onclick="filterSuppliers('home')" data-category="home">Home & Hardware</button>
-        </div>
-
-        <!-- Grid -->
-        <div class="supplier-grid" id="supplier-grid">
-
-            <!-- ============ APPAREL & TEXTILES (3) ============ -->
-            <div class="card supplier-card" data-category="apparel">
-                <div class="color-bar apparel"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge apparel">Apparel</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yantai Dongfang Garment Co.</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yantai, Shandong</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Custom workwear, uniforms, polo shirts, jackets. 200+ workers. Served brands in EU, Australia, and Middle East. MOQ: 100 pcs per design.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Workwear</span>
-                    <span class="supplier-tag">Uniforms</span>
-                    <span class="supplier-tag">Custom Embroidery</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="apparel">
-                <div class="color-bar apparel"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge apparel">Apparel</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Nantong Hengtai Knitting</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Nantong, Jiangsu</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">T-shirts, hoodies, sportswear. Knit fabric specialist with in-house printing & embroidery. 150 workers. MOQ: 50 pcs per color.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">T-Shirts</span>
-                    <span class="supplier-tag">Hoodies</span>
-                    <span class="supplier-tag">Sportswear</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="apparel">
-                <div class="color-bar apparel"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge apparel">Textiles</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Shaoxing Yuecheng Textile</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Shaoxing, Zhejiang</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Woven & knit fabrics, custom dyeing, finishing. Located in China's largest textile hub. MOQ: 500m per color. Fast sampling turnaround.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Cotton</span>
-                    <span class="supplier-tag">Polyester</span>
-                    <span class="supplier-tag">Custom Dye</span>
-                </div>
-            </div>
-
-            <!-- ============ MACHINERY & PARTS (2) ============ -->
-            <div class="card supplier-card" data-category="machinery">
-                <div class="color-bar machinery"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge machinery">Machinery</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Qingdao Precision Machinery</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Qingdao, Shandong</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">CNC machining, metal stamping, injection molds. ISO 9001 certified. Serves automotive and industrial clients in Germany and Japan.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">CNC</span>
-                    <span class="supplier-tag">Metal Stamping</span>
-                    <span class="supplier-tag">Injection Molds</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="machinery">
-                <div class="color-bar machinery"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge machinery">Parts</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Ningbo Bearing Components</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Ningbo, Zhejiang</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Bearings, bushings, seals. 25 years in business. Exports to 30+ countries. OEM & custom specs supported. MOQ negotiable.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Bearings</span>
-                    <span class="supplier-tag">Bushings</span>
-                    <span class="supplier-tag">Seals</span>
-                </div>
-            </div>
-
-            <!-- ============ ELECTRONICS (2) ============ -->
-            <div class="card supplier-card" data-category="electronics">
-                <div class="color-bar electronics"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge electronics">Electronics</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Shenzhen Huaxin Electronic</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Shenzhen, Guangdong</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">PCB assembly, consumer electronics, IoT devices. Fast prototyping. ISO 9001. Strong engineering support in English.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">PCB Assembly</span>
-                    <span class="supplier-tag">IoT</span>
-                    <span class="supplier-tag">Consumer Electronics</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="electronics">
-                <div class="color-bar electronics"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge electronics">Cables</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Dongguan Lianjie Cable</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Dongguan, Guangdong</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">USB cables, charging cables, wiring harnesses, custom connectors. CE, RoHS, UL certified. MOQ: 500 pcs per SKU.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">USB Cables</span>
-                    <span class="supplier-tag">Wiring Harness</span>
-                    <span class="supplier-tag">Custom Connectors</span>
-                </div>
-            </div>
-
-            <!-- ============ PACKAGING & PRINTING (2) ============ -->
-            <div class="card supplier-card" data-category="packaging">
-                <div class="color-bar packaging"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge packaging">Packaging</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yiwu Chenggong Packaging</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yiwu, Zhejiang</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Custom boxes, luxury rigid boxes, paper bags, hang tags. Full in-house design support. MOQ: 500 pcs. Fast turnaround.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Custom Boxes</span>
-                    <span class="supplier-tag">Paper Bags</span>
-                    <span class="supplier-tag">Hang Tags</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="packaging">
-                <div class="color-bar packaging"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge packaging">Printing</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Wenzhou Caihong Printing</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Wenzhou, Zhejiang</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Offset printing, labels, stickers, PVC cards. 20+ years experience. Serves global brands for packaging inserts and labels.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Offset Print</span>
-                    <span class="supplier-tag">Labels</span>
-                    <span class="supplier-tag">Stickers</span>
-                </div>
-            </div>
-
-            <!-- ============ HOME & HARDWARE (2) ============ -->
-            <div class="card supplier-card" data-category="home">
-                <div class="color-bar home"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge home">Hardware</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Yongkang Jinyuan Hardware</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Yongkang, Zhejiang</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Door hardware, cabinet handles, hinges, locks. China's hardware capital. 300+ workers. MOQ: 200 pcs per SKU.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Handles</span>
-                    <span class="supplier-tag">Hinges</span>
-                    <span class="supplier-tag">Locks</span>
-                </div>
-            </div>
-
-            <div class="card supplier-card" data-category="home">
-                <div class="color-bar home"></div>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
-                    <span class="category-badge home">Home Goods</span>
-                    <span class="verified-check"><i class="fa-solid fa-circle-check" style="color:#059669;"></i> Verified</span>
-                </div>
-                <h3 style="font-size:1.15rem;margin-bottom:0.25rem;">Chaozhou Dehua Ceramics</h3>
-                <p class="supplier-location" style="margin-bottom:0.75rem;"><i class="fa-solid fa-location-dot" style="color:var(--color-gray-400);"></i> Chaozhou, Guangdong</p>
-                <p class="supplier-desc" style="margin-bottom:1rem;">Ceramic dinnerware, mugs, vases, custom designs. 40 years in ceramics. Exports to 50+ countries. MOQ: 300 pcs per design.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-                    <span class="supplier-tag">Dinnerware</span>
-                    <span class="supplier-tag">Mugs</span>
-                    <span class="supplier-tag">Custom Ceramics</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Empty state -->
-        <div id="empty-state" style="display:none;text-align:center;padding:4rem 0;">
-            <i class="fa-solid fa-magnifying-glass" style="font-size:3rem;color:var(--color-gray-300);margin-bottom:1rem;"></i>
-            <p style="font-size:1.25rem;font-weight:700;color:var(--color-gray-500);margin-bottom:0.5rem;">No suppliers in this category yet</p>
-            <p style="color:var(--color-gray-400);">We're constantly verifying new factories. <a href="contact.html" style="color:var(--color-primary);text-decoration:underline;">Tell us what you need</a> and we'll find the right match.</p>
-        </div>
-    </div>
-</section>
-
-<!-- What "Verified" means -->
-<section class="section" style="background:var(--color-gray-50);border-top:1px solid var(--color-gray-200);border-bottom:1px solid var(--color-gray-200);">
-    <div class="container container-narrow">
-        <div class="text-center mb-2xl">
-            <h2>What "Verified" means to us</h2>
-            <p style="color:var(--color-gray-600);max-width:600px;margin:1rem auto 0;">Not every supplier makes it into our network. Here's what we check before listing a factory.</p>
-        </div>
-
-        <div class="grid-3">
-            <div class="verify-standard-card">
-                <div class="verify-icon-circle" style="background:#DBEAFE;color:#2563EB;">
-                    <i class="fa-solid fa-file-certificate"></i>
-                </div>
-                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Document Check</h3>
-                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">Business license, export registration, certificates (ISO, CE, etc.) — all cross-checked against government databases.</p>
-            </div>
-            <div class="verify-standard-card">
-                <div class="verify-icon-circle" style="background:#D1FAE5;color:#059669;">
-                    <i class="fa-solid fa-building-user"></i>
-                </div>
-                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Factory Visit</h3>
-                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">We walk the factory floor. Real equipment, real workers, real production lines — not a staged showroom or a borrowed address.</p>
-            </div>
-            <div class="verify-standard-card">
-                <div class="verify-icon-circle" style="background:#FEF3C7;color:#B8860B;">
-                    <i class="fa-solid fa-clipboard-check"></i>
-                </div>
-                <h3 style="font-size:1.05rem;margin-bottom:0.75rem;">Sample Review</h3>
-                <p style="font-size:0.9rem;color:var(--color-gray-600);line-height:1.6;">We inspect physical samples on-site — material quality, workmanship, finishing — and share honest feedback with you.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="section section-dark" style="text-align:center;">
-    <div class="container container-narrow">
-        <h2 style="color:white;margin-bottom:1rem;">Don't see what you need?</h2>
-        <p style="color:#D1D5DB;font-size:1.125rem;margin-bottom:2rem;">Our verified network covers more categories than we can list. Tell us what you're sourcing — we likely have a factory that fits.</p>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
-            <a href="contact.html" class="btn btn-primary btn-lg">Tell Us What You Need <i class="fa-solid fa-arrow-right"></i></a>
-            <a href="verification.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:white;">Get a Supplier Verified — $30</a>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer style="background:var(--color-navy);color:#D1D5DB;padding:4rem 0 2rem;">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
-            <div><img src="logo.png" alt="ChinaPartnerHub" style="height:28px;margin-bottom:1rem;filter:brightness(10);"><p style="font-size:0.9rem;line-height:1.7;max-width:300px;opacity:0.8;">Every supplier we list has been vetted in person. No database scrapes. No unverified listings. Real factories, real verification.</p></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><li><a href="how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="verified-suppliers.html" style="opacity:0.8;">Verified Suppliers</a></li><li><a href="about.html" style="opacity:0.8;">About</a></li><li><a href="verification.html" style="opacity:0.8;">Supplier Verification</a></li><li><a href="contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
-            <div><h4 style="color:white;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Contact</h4><div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.9rem;"><a href="mailto:info@chinapartnerhub.com" style="opacity:0.8;"><i class="fa-regular fa-envelope" style="color:#059669;margin-right:0.5rem;"></i>info@chinapartnerhub.com</a><a href="https://wa.me/8618660006236" target="_blank" style="opacity:0.8;"><i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:0.5rem;"></i>+86 18660006236</a></div></div>
-        </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:0.8rem;flex-wrap:wrap;gap:1rem;"><p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p><div style="display:flex;gap:1.5rem;"><a href="privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="terms.html" style="opacity:0.6;">Terms of Service</a></div></div>
-    </div>
-</footer>
-
-<a href="https://wa.me/8618660006236" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-<script>
-// Mobile menu toggle
-const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
-navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
-mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
-const s=document.getElementById('scrollTop');window.addEventListener('scroll',()=>s.classList.toggle('visible',window.scrollY>600));s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-
-// Category filter
-function filterSuppliers(category) {
-    const cards = document.querySelectorAll('#supplier-grid .supplier-card');
-    const buttons = document.querySelectorAll('#filter-bar .filter-btn');
-    const emptyState = document.getElementById('empty-state');
-    let visibleCount = 0;
-
-    cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-            card.style.display = '';
-            visibleCount++;
-        } else {
-            card.style.display = 'none';
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://chinapartnerhub.com/verified-suppliers.html#webpage",
+          "url": "https://chinapartnerhub.com/verified-suppliers.html",
+          "name": "Verified supplier profiles",
+          "description": "Example verified supplier profiles from China Partner Hub."
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://chinapartnerhub.com/verified-suppliers.html#profiles",
+          "name": "Example verified supplier profiles",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Apparel and soft goods supplier profile"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Workshop and small-batch production supplier profile"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Industrial dust-control equipment supplier profile"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Shipment-ready export coordination profile"
+            }
+          ]
         }
-    });
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKQ9PW38CZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-PKQ9PW38CZ");
+    </script>
+</head>
+<body class="antialiased">
+    <div class="border-b section-line bg-[rgba(19,35,44,0.96)] text-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-3 text-center text-[11px] font-semibold tracking-[0.16em] sm:text-xs">
+            <span class="inline-flex h-2 w-2 rounded-full bg-[#9de7df]"></span>
+            <span>Example supplier profiles built from real category work, with names and codes hidden for privacy.</span>
+        </div>
+    </div>
 
-    buttons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.category === category);
-    });
+    <nav class="sticky top-0 z-50 border-b section-line bg-[rgba(248,244,236,0.84)] backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center gap-4">
+                <img src="brand-icon.svg?v=3" alt="China Partner Hub" class="h-12 w-12 rounded-2xl object-contain shadow-sm sm:h-14 sm:w-14">
+                <div class="hidden sm:block">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">China Partner Hub</p>
+                    <p class="text-sm text-slate-700">Procurement support and supplier control in China</p>
+                </div>
+            </a>
+            <div class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+                <a href="about.html" class="transition hover:text-teal-700">About</a>
+                <a href="services.html" class="transition hover:text-teal-700">Services</a>
+                <a href="verified-suppliers.html" class="text-teal-800">Verified Suppliers</a>
+                <a href="contact.html" class="transition hover:text-teal-700">Contact</a>
+                <a href="/insights/" class="transition hover:text-teal-700">Insights</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="start-project.html" class="hidden rounded-full border border-slate-300 px-4 py-2 text-sm font-bold text-slate-800 transition hover:border-slate-400 sm:inline-flex">Start Project</a>
+                <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/10 transition">Send brief on WhatsApp</a>
+            </div>
+        </div>
+    </nav>
 
-    emptyState.style.display = visibleCount > 0 ? 'none' : 'block';
-}
-</script>
+    <main>
+        <section class="px-6 pb-16 pt-12 lg:pb-24 lg:pt-16">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+                <div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Real category range</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">In-person verification</span>
+                        <span class="chip rounded-full px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-700">Private details hidden</span>
+                    </div>
+                    <p class="eyebrow mt-8 text-teal-800">Verified Suppliers</p>
+                    <h1 class="display-font mt-5 max-w-5xl text-[3.1rem] font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 sm:text-[4.4rem]">Verified supplier profiles across consumer goods, industrial categories, plastics, solar products, and shipping-stage sourcing work.</h1>
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-700">Each profile shows supplier fit, order profile, verification focus, and what the supplier can handle before shipping, while names, codes, and client-linked details stay private.</p>
+                    <div class="mt-8 grid max-w-3xl gap-4 sm:grid-cols-3">
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Why no public names</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Privacy matters. You can trust the proof more when real examples are shown without exposing private details.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">You can check</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">Category fit, order profile, workshop evidence, shipping-stage readiness, and what was checked before recommending a supplier.</p>
+                        </div>
+                        <div class="rounded-[1.6rem] border section-line bg-white/80 p-5 shadow-float">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Why this helps</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-700">You can compare supplier fit across consumer and industrial work before moving into a larger order.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-[2rem] p-4 shadow-dossier">
+                    <div class="image-mask">
+                        <img src="supplier-showcase-documentary.png" alt="Mixed category sourcing collage with samples, equipment, and supplier context" class="h-[430px] w-full object-cover">
+                        <div class="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+                            <p class="eyebrow text-[#c8f7f3]">Verified categories</p>
+                        <p class="mt-3 max-w-md text-xl font-bold leading-8">Supplier fit, category depth, and real proof shown with private details hidden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 pb-24">
+            <div class="mx-auto max-w-7xl rounded-[2.4rem] border section-line bg-[rgba(255,255,255,0.82)] p-8 shadow-dossier sm:p-10">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-rust-700">Why this page exists</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">This page is here to support the sourcing claim with real category and workshop proof.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-700">It should help you answer two questions quickly: have similar categories been handled before, and does the proof look real enough to trust the working style?</p>
+                        <p class="mt-4 max-w-2xl rounded-[1.4rem] border section-line bg-[rgba(12,124,120,0.06)] p-5 text-sm font-bold leading-7 text-slate-800">The categories below are examples, not a boundary. If your product is not listed, it can still be reviewed for supplier sourcing, factory verification, quantity checks, quality checks, production control, and shipping coordination.</p>
+                    </div>
+                    <div class="rounded-[1.7rem] bg-[rgba(19,35,44,0.96)] p-6 text-white shadow-float lg:max-w-sm">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#9de7df]">Before you ask for supplier matching</p>
+                    <p class="mt-4 text-sm leading-7 text-slate-200">These are public examples. Supplier names, factory identifiers, and customer-linked details stay private unless a real project requires them.</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Apparel and footwear</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Soft goods suppliers</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Clothing, children's wear, shoes, women's pants, jerseys, sample review, trims, labels, and packaging checks.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Machinery and parts</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Industrial supplier checks</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Motorcycle parts, industrial dust-control equipment, medical equipment vacuum chambers, and excavator extension parts.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Plastic products</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Rotomolded and pallet factories</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Rotomolded tanks, plastic drums, industrial containers, plastic pallets, and catalog-to-factory matching.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Daily and outdoor goods</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Lifestyle product factories</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Camping wagons, camping tables and chairs, pet products, and other daily-use product suppliers.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Electronics and solar</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Power and device categories</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Electronic devices, solar panels, energy storage products, solar lights, power banks, and packaging that is ready for export shipment.</p>
+                    </article>
+                    <article class="rounded-[1.8rem] border section-line bg-white p-6 shadow-float">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Furniture and building</p>
+                        <h3 class="mt-4 text-2xl font-bold text-slate-950">Home and material suppliers</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">Furniture, building materials, solid wood tables and chairs, supplier fit checks, quantity checks, and shipment coordination.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 pb-24">
+            <div class="mx-auto max-w-7xl overflow-hidden rounded-[2.4rem] border section-line bg-[rgba(19,35,44,0.98)] p-6 text-white shadow-dossier sm:p-8">
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-[#9de7df]">Proof wall</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">A quick moving wall of supplier materials, workshop scenes, and shipment proof.</h2>
+                        <p class="mt-5 text-base leading-8 text-slate-200">Use this section for a fast impression of category range and real operating context. It is support material, not the whole decision.</p>
+                        <p class="mt-4 text-base leading-8 text-slate-200">The suppliers shown here are examples, not the full limit of what China Partner Hub can support. If your product is not shown, the category can still be reviewed and sourced.</p>
+                    </div>
+                    <div class="rounded-[1.5rem] border border-white/10 bg-white/8 p-5 lg:max-w-xs">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-300">How to use it</p>
+                        <p class="mt-3 text-sm leading-7 text-slate-200">Use this section for a quick impression, then use the fixed examples below for clearer fit notes.</p>
+                    </div>
+                </div>
+
+                <div id="proofRail" class="proof-rail mt-8 space-y-4" aria-label="Dynamic supplier proof image wall">
+                    <div class="rounded-[1.3rem] border border-white/10 bg-white/8 p-5 text-sm font-semibold text-slate-200">Loading supplier proof images...</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 pb-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-rust-700">Fixed examples</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">A few fixed examples show the kind of judgment behind the proof.</h2>
+                        <p class="mt-6 text-lg leading-8 text-slate-700">These examples are not here to flood the page. They are here to show how category fit, workshop reality, documentation, and shipment visibility are read.</p>
+                    </div>
+                    <div class="rounded-[1.7rem] border section-line bg-white/80 p-6 shadow-float lg:max-w-sm">
+                        <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500">Your takeaway</p>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">You are not limited to these public examples. The sourcing path can still be matched to your actual product and order profile.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid gap-5 md:grid-cols-3">
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float md:col-span-2">
+                        <img src="supplier-soccer-jerseys-showroom.jpeg" alt="Soccer jersey supplier showroom with multiple uniform designs on mannequins" class="h-[340px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Jersey and sportswear sourcing</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">A fixed jersey example helps you see the kind of supplier category we can discuss: team uniforms, colorways, fabric feel, size runs, logo placement, packaging, and repeat-order consistency.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-apparel-workshop-bulk.jpg" alt="Apparel factory workshop with packed garments, hanging samples, and bulk order inventory" class="h-[340px] w-full object-cover object-center">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Apparel workshop capacity</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">A workshop photo like this helps you judge production density, packed SKU handling, sample visibility, and whether the supplier looks ready for repeat apparel orders.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float md:col-span-2">
+                        <img src="supplier-inspection-table.jpeg" alt="Team reviewing multiple jersey samples and size sheets on a supplier inspection table" class="h-[340px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Inspection handling</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">The actual comparison table often tells you more than final product photos alone.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-kidswear-flatlay-sets.jpg" alt="Children's apparel sample sets from supplier product photos" class="h-[340px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Workshop reality</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Shows production density and real workshop context instead of catalog-only positioning.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-fabric-detail-grid.jpeg" alt="Fabric and garment detail grid for neckline, sleeve, and stitching review" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Material detail</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Detail grids help you judge finishing quality before relying on claims about fabric or trim.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-babywear-set.jpg" alt="Babywear set photo from a supplier product line" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">SKU proof</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Category breadth matters. Supplier coverage here includes babywear and softer consumer lines as well.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-childrenswear-hanging-sets.jpg" alt="Children's clothing sets hanging together from a supplier product line" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Children's wear</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Useful if you are comparing soft goods suppliers where sizing, color sets, fabric feel, and repeat SKU consistency matter.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-kidswear-flatlay-sets.jpg" alt="Flatlay of children's clothing sets from supplier sample photos" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Sample grouping</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Flatlay product sets make it easier to compare graphics, trims, colorways, and how a supplier presents multiple SKUs.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-undergarment-workshop-sample.jpg" alt="Undergarment sample hanging in a supplier workshop setting" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Soft goods check</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Some categories need closer attention to stitching, shape, color, packaging, and whether the sample matches your intended market.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-packaged-apparel-sku-bin.jpg" alt="Packaged apparel SKUs in a factory handling bin" class="h-[300px] w-full object-cover">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Packed SKU handling</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-600">Packaging and bin-level handling are part of the check when you need quantity control and shipment-ready execution.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] text-white shadow-dossier md:col-span-2">
+                        <img src="supplier-kopu-dust-collector-catalog.jpg" alt="Industrial baghouse dust collector catalog page from a supplier PDF brochure" class="h-[300px] w-full object-cover object-center">
+                        <div class="p-6">
+                            <p class="text-xs font-bold uppercase tracking-[0.16em] text-[#9de7df]">Industrial supplier coverage</p>
+                            <p class="mt-3 text-sm leading-7 text-slate-200">The range is not limited to apparel. Supplier PDF brochures, equipment catalogs, process systems, and plant-adjacent suppliers are part of the verified range too.</p>
+                        </div>
+                    </article>
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float md:col-span-3">
+                        <img src="supplier-shipping-redacted.jpg" alt="Shipment label proof with sensitive details masked" class="h-[280px] w-full object-cover">
+                        <div class="p-6 md:flex md:items-start md:justify-between md:gap-8">
+                            <div class="max-w-2xl">
+                                <p class="text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Delivery proof with private details hidden</p>
+                                <p class="mt-3 text-sm leading-7 text-slate-600">Many suppliers and many orders can be shown safely when names, labels, and codes are hidden instead of posted publicly.</p>
+                            </div>
+                            <p class="mt-4 max-w-sm text-sm leading-7 text-slate-500 md:mt-0">This keeps the balance right: enough proof to judge the work, without exposing client or supplier details.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="draft-grid border-y section-line px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-6 lg:grid-cols-2">
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-apparel-01.jpg" alt="Apparel sample layout from a real supplier project" class="h-72 w-full object-cover">
+                        <div class="p-8">
+                            <div class="flex flex-wrap gap-3">
+                                <span class="rounded-full bg-[var(--teal-soft)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Private label ready</span>
+                                <span class="rounded-full bg-[rgba(192,92,47,0.12)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Low MOQ possible</span>
+                            </div>
+                            <h2 class="mt-5 text-3xl font-bold text-slate-950">Apparel and soft goods supplier profile</h2>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Suitable for fashion startups, babywear projects, merch drops, and repeat private-label orders where sample consistency, trim details, and communication discipline matter.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Typical order profile</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Sampling to moderate production runs</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">What was checked</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Factory role, sample consistency, trim handling, revision response</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Why this matters</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Reduces the risk of pretty samples that do not scale into repeatable production</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-inspection-table.jpeg" alt="Supplier inspection table showing sample comparison and order checking" class="h-72 w-full object-cover object-center">
+                        <div class="p-8">
+                            <div class="flex flex-wrap gap-3">
+                                <span class="rounded-full bg-[var(--teal-soft)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Workshop verified</span>
+                                <span class="rounded-full bg-[rgba(192,92,47,0.12)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Small-batch capable</span>
+                            </div>
+                            <h2 class="mt-5 text-3xl font-bold text-slate-950">Workshop and small-batch production profile</h2>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Best if you need a workshop that can handle lower-volume production with direct communication and fewer surprises around packaging, finishing, or handling quality.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Typical order profile</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Pilot orders, test batches, restock-ready SKUs</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">What was checked</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Handling environment, packing discipline, export communication, responsiveness</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Why this matters</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Useful when you want real workshop visibility instead of only catalog photos</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] text-white shadow-dossier">
+                        <img src="supplier-dust-system-01.jpg" alt="Industrial dust-control equipment used as a supplier reference" class="h-72 w-full object-cover object-right">
+                        <div class="p-8">
+                            <div class="flex flex-wrap gap-3">
+                                <span class="rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">Industrial sourcing</span>
+                                <span class="rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-white">Documentation focused</span>
+                            </div>
+                            <h2 class="mt-5 text-3xl font-bold">Dust-control and process equipment supplier profile</h2>
+                        <p class="mt-4 text-sm leading-7 text-slate-200">Relevant for industrial sourcing, resale, and plant-adjacent projects where specification discipline, equipment documentation, and shipping-stage readiness matter more than a fast quote.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">Typical order profile</dt>
+                                    <dd class="max-w-[62%] text-right text-white">B2B orders, utility projects, repeat equipment buying</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">What was checked</dt>
+                                    <dd class="max-w-[62%] text-right text-white">Response discipline, documentation quality, process visibility, export communication</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t border-white/10 pt-3">
+                                    <dt class="font-bold text-slate-300">Why this matters</dt>
+                                    <dd class="max-w-[62%] text-right text-white">Prevents mismatches between brochure claims and real-world industrial execution</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="tilt-card overflow-hidden rounded-[2rem] border section-line bg-white shadow-float">
+                        <img src="supplier-shipping-redacted.jpg" alt="Redacted shipment proof from a real order" class="h-72 w-full object-cover">
+                        <div class="p-8">
+                            <div class="flex flex-wrap gap-3">
+                                <span class="rounded-full bg-[var(--teal-soft)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-teal-800">Shipment-ready</span>
+                            <span class="rounded-full bg-[rgba(192,92,47,0.12)] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-rust-700">Private details hidden</span>
+                            </div>
+                            <h2 class="mt-5 text-3xl font-bold text-slate-950">Shipping coordination and shipment visibility profile</h2>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Useful if you already have a supplier but still need visibility over production completion, shipment handoff, and whether logistics proof is being handled cleanly.</p>
+                            <dl class="mt-6 space-y-3 text-sm">
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Typical order profile</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Repeat orders, production follow-up, handoff support</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">What was checked</dt>
+                                <dd class="max-w-[62%] text-right text-slate-800">Shipping-stage readiness, milestone proof, issue escalation, documentation discipline</dd>
+                                </div>
+                                <div class="flex items-start justify-between gap-4 border-t section-line pt-3">
+                                    <dt class="font-bold text-slate-500">Why this matters</dt>
+                                    <dd class="max-w-[62%] text-right text-slate-800">Keeps proof visible without exposing names, labels, tracking numbers, or client data</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
+                    <div>
+                        <p class="eyebrow text-rust-700">What the proof should tell you</p>
+                        <h2 class="display-font mt-5 text-4xl font-semibold tracking-[-0.03em] text-slate-950 sm:text-5xl">A supplier profile is only useful when it shows what was checked and why that matters.</h2>
+                    </div>
+                    <div class="grid gap-5 md:grid-cols-2">
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <h3 class="text-2xl font-bold text-slate-950">Identity and role clarity</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Factory, workshop, trader, or mixed role. You need to know which one you are dealing with.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <h3 class="text-2xl font-bold text-slate-950">Sample and process discipline</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">A good supplier can explain revisions, tolerances, packaging, and production assumptions before mistakes multiply.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                            <h3 class="text-2xl font-bold text-slate-950">Communication quality</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Fast replies mean little if the answers are vague, evasive, or disconnected from what the order requires.</p>
+                        </article>
+                        <article class="rounded-[1.8rem] border section-line bg-white p-7 shadow-float">
+                                <h3 class="text-2xl font-bold text-slate-950">Ready for the shipping stage</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-600">Documentation, shipping coordination, and handoff discipline matter just as much as the original quote.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y section-line bg-[rgba(19,35,44,0.96)] px-6 py-24 text-white">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+                    <div>
+                        <p class="eyebrow text-[#9de7df]">Next step</p>
+                        <h2 class="display-font mt-4 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">If the proof looks credible, the next step is simple.</h2>
+                        <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">If you already have a supplier, use verification. If the supplier path still needs to be built, start a procurement brief instead.</p>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                <a href="start-project.html" class="cta-main inline-flex justify-center rounded-full px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-900/20 transition">Start your procurement brief</a>
+                <a href="verification.html" class="inline-flex justify-center rounded-full border border-white/20 px-7 py-4 text-base font-bold text-white transition hover:border-white/40">Already have a supplier? Start with verification</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t section-line bg-[rgba(255,255,255,0.7)]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-4">
+                    <img src="brand-icon.svg?v=3" alt="China Partner Hub icon" class="h-12 w-12 rounded-2xl object-contain shadow-sm">
+                    <div>
+                        <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-950">China Partner Hub</p>
+                        <p class="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">On-the-ground China sourcing partner</p>
+                    </div>
+                </div>
+                    <p class="mt-5 max-w-sm text-sm leading-7 text-slate-600">Verified supplier profiles cover category fit, production context, and shipping-stage readiness without exposing factory names, codes, or customer-linked information in public.</p>
+            </div>
+            <div class="md:text-center">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Navigation</h3>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><a href="about.html" class="transition hover:text-teal-700">About</a></li>
+                    <li><a href="services.html" class="transition hover:text-teal-700">Services</a></li>
+                    <li><a href="verification.html" class="transition hover:text-teal-700">Verification</a></li>
+                    <li><a href="contact.html" class="transition hover:text-teal-700">Contact</a></li>
+                    <li><a href="/insights/" class="transition hover:text-teal-700">Insights</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Contact</h3>
+                <div class="mt-5 space-y-4 text-sm text-slate-700 md:flex md:flex-col md:items-end">
+                    <a href="mailto:info@chinapartnerhub.com" class="transition hover:text-teal-700">info@chinapartnerhub.com</a>
+                    <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="transition hover:text-teal-700">+86 180 0545 5057</a>
+                    <p><a href="privacy.html" class="transition hover:text-teal-700">Privacy</a> / <a href="terms.html" class="transition hover:text-teal-700">Terms</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        async function buildProofWall() {
+            const rail = document.getElementById("proofRail");
+            if (!rail) return;
+
+            try {
+                const response = await fetch("proof-wall-manifest.json");
+                const allItems = await response.json();
+                const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+                const isMediumScreen = window.matchMedia("(max-width: 1100px)").matches;
+                const maxItems = isSmallScreen ? 36 : isMediumScreen ? 84 : 150;
+                const rowCount = isSmallScreen ? 2 : 3;
+                const items = allItems.slice(0, maxItems);
+                const rows = Array.from({ length: rowCount }, () => []);
+
+                items.forEach((item, index) => {
+                    rows[index % rows.length].push(item);
+                });
+
+                rail.innerHTML = "";
+                rows.forEach((row, rowIndex) => {
+                    const track = document.createElement("div");
+                    track.className = `proof-track${rowIndex === 1 ? " reverse" : ""}`;
+                    track.style.animationDuration = `${Math.max(isSmallScreen ? 70 : 90, row.length * 4)}s`;
+
+                    [...row, ...row].forEach((item) => {
+                        const figure = document.createElement("figure");
+                        figure.className = "proof-tile";
+
+                        const img = document.createElement("img");
+                        img.src = item.src;
+                        img.alt = `${item.caption} supplier proof image`;
+                        img.loading = "lazy";
+                        img.decoding = "async";
+
+                        const caption = document.createElement("figcaption");
+                        caption.textContent = item.caption;
+
+                        figure.append(img, caption);
+                        track.append(figure);
+                    });
+
+                    rail.append(track);
+                });
+            } catch (error) {
+                rail.innerHTML = '<div class="rounded-[1.3rem] border border-white/10 bg-white/8 p-5 text-sm font-semibold text-slate-200">Supplier proof images are available in the catalog, but the dynamic wall could not load them in this browser session.</div>';
+            }
+        }
+
+        buildProofWall();
+    </script>
+<script src="site-ui.js"></script>
 </body>
 </html>

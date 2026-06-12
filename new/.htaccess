@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect explicit index documents to canonical folder URLs.
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[\s?]|$) [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# Redirect extensionless requests when an .html file exists.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [R=301,L]

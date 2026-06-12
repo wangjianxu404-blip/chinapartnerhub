@@ -1,154 +1,225 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Before Paying: Most Sourcing Problems Start Before You Send Money | chinapartnerhub.com</title>
-    <meta name="description" content="Most people worry about quality after production. In reality, most problems start before the first payment. Six simple checks to verify a Chinese supplier before you send money.">
+    <title>Check Before Paying: Most Sourcing Problems Start Before You Send Money | China Partner Hub</title>
+    <meta name="description" content="Six practical checks to verify a Chinese supplier before payment, from factory role to sample consistency.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://chinapartnerhub.com/insights/check-before-paying.html">
-    <meta property="og:title" content="Check Before Paying: Most Problems Start Before You Send Money">
-    <meta property="og:description" content="Six practical checks to verify a Chinese supplier before payment — from factory vs trading company to sample consistency.">
-    <meta property="og:url" content="https://chinapartnerhub.com/insights/check-before-paying.html">
+    <meta property="og:title" content="Check Before Paying: Most Sourcing Problems Start Before You Send Money">
+    <meta property="og:description" content="Six practical checks to verify a Chinese supplier before payment, from factory role to sample consistency.">
     <meta property="og:type" content="article">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="llms" href="/llms.txt">
+    <meta property="og:image" content="https://chinapartnerhub.com/inspection-documentary.png">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700;6..72,800&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Public Sans", "sans-serif"],
+                        display: ["Newsreader", "serif"]
+                    },
+                    boxShadow: {
+                        dossier: "0 30px 90px rgba(18, 31, 39, 0.18)",
+                        float: "0 18px 40px rgba(18, 31, 39, 0.10)"
+                    }
+                }
+            }
+        };
+    </script>
     <style>
-        .article-body { font-size: 1.075rem; line-height: 1.9; color: var(--color-gray-700); }
-        .article-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); margin-top: 2.5rem; margin-bottom: 1rem; }
-        .check-item { display: flex; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-gray-100); align-items: flex-start; }
-        .check-num { width: 32px; height: 32px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
-        .check-content h3 { font-size: 1.1rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.25rem; }
-        .check-content p { color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; }
+        :root {
+            --ink: #162027;
+            --line: rgba(22, 32, 39, 0.14);
+            --teal: #0c7c78;
+            --rust: #c05c2f;
+            --grid: rgba(19, 35, 44, 0.06);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: "Public Sans", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(192, 92, 47, 0.11), transparent 24%),
+                radial-gradient(circle at top right, rgba(12, 124, 120, 0.12), transparent 30%),
+                linear-gradient(180deg, #f8f4ec 0%, #f5f0e6 42%, #f8faf9 100%);
+        }
+        .display-font { font-family: "Newsreader", serif; }
+        .eyebrow { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 800; }
+        .section-line { border-color: var(--line); }
+        .cta-main { background: linear-gradient(135deg, var(--teal), #15938d); }
+        .cta-alt { background: linear-gradient(135deg, var(--rust), #d97745); }
+        .cta-main:hover, .cta-alt:hover { filter: brightness(1.04); }
+        .draft-grid {
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .article-body { color: #334155; font-size: 1.05rem; line-height: 1.95; }
+        .article-body p { margin-top: 1.25rem; }
+        .article-body h2 { margin-top: 2.8rem; font-size: 1.75rem; line-height: 1.2; font-weight: 800; color: #0f172a; }
+        .article-body ul { margin-top: 1.25rem; display: grid; gap: 0.7rem; padding-left: 0; list-style: none; }
+        .article-body li { border-left: 3px solid rgba(12, 124, 120, 0.32); background: rgba(12, 124, 120, 0.045); border-radius: 0.75rem; padding: 0.85rem 1rem; }
+        .article-body table { margin-top: 1.5rem; width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 1rem; font-size: 0.92rem; }
+        .article-body th, .article-body td { border: 1px solid rgba(22, 32, 39, 0.12); padding: 0.85rem; vertical-align: top; }
+        .article-body th { background: rgba(19, 35, 44, 0.96); color: white; }
+        .highlight-box { margin: 2rem 0; border: 1px solid rgba(12, 124, 120, 0.22); border-left: 5px solid var(--teal); background: rgba(12, 124, 120, 0.06); border-radius: 1.2rem; padding: 1.5rem; }
     </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PKQ9PW38CZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-PKQ9PW38CZ");
+    </script>
 </head>
-<body>
-
-<div style="background:var(--color-navy);color:white;text-align:center;padding:8px 16px;font-size:13px;font-weight:500;letter-spacing:0.02em;">
-    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#22C55E;margin-right:8px;animation:pulse-glow 2s infinite;"></span>
-    Real sourcing advice from someone on the ground in China.
+<body class="antialiased">
+    <div class="border-b section-line bg-[rgba(19,35,44,0.96)] text-white">
+        <div class="mx-auto flex max-w-7xl items-center justify-center gap-3 px-6 py-3 text-center text-[11px] font-semibold tracking-[0.16em] sm:text-xs">
+            <span class="inline-flex h-2 w-2 rounded-full bg-[#9de7df]"></span>
+            <span>Practical China sourcing advice from fieldwork, supplier checks, and the problems you actually run into.</span>
+        </div>
+    </div>
+    <nav class="sticky top-0 z-50 border-b section-line bg-[rgba(248,244,236,0.84)] backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="/" class="flex items-center gap-4">
+                <img src="../brand-icon.svg?v=3" alt="China Partner Hub" class="h-12 w-12 rounded-2xl object-contain shadow-sm sm:h-14 sm:w-14">
+                <div class="hidden sm:block">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-slate-500">China Partner Hub</p>
+                    <p class="text-sm text-slate-700">Supplier verification and sourcing control in China</p>
+                </div>
+            </a>
+            <div class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+                <a href="../about.html" class="transition hover:text-teal-700">About</a>
+                <a href="../services.html" class="transition hover:text-teal-700">Services</a>
+                <a href="../verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a>
+                <a href="../verification.html" class="transition hover:text-teal-700">Verification</a>
+                <a href="/insights/" class="text-teal-800">Insights</a>
+                <a href="../contact.html" class="transition hover:text-teal-700">Contact</a>
+            </div>
+            <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white shadow-lg shadow-teal-900/10 transition">Start on WhatsApp</a>
+        </div>
+    </nav>
+    <main>
+        <section class="draft-grid px-6 py-20 lg:py-28">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_0.38fr] lg:items-start">
+                <article class="rounded-[2.3rem] border section-line bg-[rgba(255,255,255,0.88)] p-8 shadow-dossier sm:p-12">
+                    <p class="eyebrow text-teal-800">Verification</p>
+                    <h1 class="display-font mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-slate-950 sm:text-6xl">Check Before Paying: Most Sourcing Problems Start Before You Send Money</h1>
+                    <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-700">Six practical checks to verify a Chinese supplier before payment, from factory role to sample consistency.</p>
+                    <div class="article-body mt-10 border-t section-line pt-8">
+                        
+<p>Online, many suppliers look the same. Nice photos, low MOQ, fast replies. But once money is sent, things can start to shift — lead time changes, specs move, or the "factory" turns out to be a trading company with a good website.</p>
+<p>Here are the six things I check before sending any payment:</p>
+<div class="check-item">
+<div class="check-num">1</div>
+<div class="check-content">
+<h3>Is it actually a factory?</h3>
+<p>Many suppliers say they're manufacturers but can't show real production. A quick live video of machines running usually tells a lot. Real factories normally don't hesitate to show you the production floor. Trading companies often avoid it or send old clips. Ask for a video call — not pre-recorded footage — walking through the production line.</p>
+</div>
+</div>
+<div class="check-item">
+<div class="check-num">2</div>
+<div class="check-content">
+<h3>Does their capacity match their promises?</h3>
+<p>Small orders often get delayed because factories prioritize bigger clients. I try to understand how many similar machines they run and whether this product is part of their regular production. If it's not their usual line, your order may always be "next in line" behind their core customers.</p>
+</div>
+</div>
+<div class="check-item">
+<div class="check-num">3</div>
+<div class="check-content">
+<h3>Does the pricing give clues?</h3>
+<p>Factories usually calculate based on material and labor, so their numbers often look uneven — $1.37, $4.82, etc. Trading companies tend to give very clean round pricing: $1.50, $5.00. Not always a definitive signal, but it's something I pay attention to when combined with other factors.</p>
+</div>
+</div>
+<div class="check-item">
+<div class="check-num">4</div>
+<div class="check-content">
+<h3>Sample vs batch consistency</h3>
+<p>Some suppliers send a great sample, then change components later to save cost on the production run. I always confirm key details before production: material thickness, component brands, finishing standards. Write them down. Vague answers at this stage are usually a warning sign — a good supplier can specify exactly what you're getting.</p>
+</div>
+</div>
+<div class="check-item">
+<div class="check-num">5</div>
+<div class="check-content">
+<h3>Location mismatch</h3>
+<p>Sometimes the listing shows one city, but the actual factory is somewhere else entirely. That doesn't automatically mean a problem — many trading companies have legitimate satellite offices. But it often means you're dealing with a middle layer, and it can affect lead time, communication, and your ability to verify anything in person later.</p>
+</div>
+</div>
+<div class="check-item">
+<div class="check-num">6</div>
+<div class="check-content">
+<h3>Business license cross-check</h3>
+<p>In China, company registration information is publicly searchable. You can check: Is the company actually registered as a manufacturer or a trading company? When was it established? Is the registered address a factory zone or a residential building? A company registered 6 months ago claiming 20 years of experience is a problem. A "factory" registered at a residential address is another.</p>
+</div>
+</div>
+<h2>These checks are simple — but skipping them is where things go wrong</h2>
+<p>None of these checks require deep expertise. Most of them can be done before you send a single dollar. Even just confirming the company name, location, and production setup early on can filter out a large portion of risky suppliers.</p>
+<p>The pattern I see over and over: you find a supplier online, the photos look good, the price is attractive, the salesperson is friendly — and payment goes out before anything is verified. Then the problems start.</p>
+<p>If you're considering a supplier right now, run through these six checks first. If something doesn't add up, don't ignore it just because the price is good. The money you save on a cheaper quote won't mean much if the goods never arrive — or arrive wrong.</p>
+<div style="background:rgba(12,124,120,0.06);border:1px solid rgba(12,124,120,0.22);border-radius:1.2rem;padding:1.5rem;margin-top:2rem;text-align:center;">
+<p style="margin-bottom:0.75rem;color:#334155;"><strong>Don't want to do these checks yourself?</strong> We'll verify a supplier for you for $39. If the order moves forward, that payment can be upgraded into a $59 credit.</p>
+<a class="cta-main inline-flex rounded-full px-5 py-3 text-sm font-bold text-white" href="../verification.html">Verify a Supplier - $39</a>
 </div>
 
-<nav class="nav" id="navbar">
-    <div class="container">
-        <a href="../index.html" class="nav-logo"><img src="../logo.png" alt="ChinaPartnerHub" style="height:32px;"></a>
-        <ul class="nav-links">
-            <li><a href="../how-it-works.html">How It Works</a></li>
-            <li><a href="../services.html">Services & Pricing</a></li>
-            <li><a href="../verified-suppliers.html">Verified Suppliers</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="index.html" class="active">Insights</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-        </ul>
-        <a href="../contact.html" class="btn btn-primary btn-sm">Get Started</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-    <a href="../how-it-works.html">How It Works</a><a href="../services.html">Services & Pricing</a><a href="../verified-suppliers.html">Verified Suppliers</a><a href="../about.html">About</a><a href="index.html">Insights</a><a href="../contact.html">Contact</a>
-</div>
-
-<article class="section" style="background:var(--color-white);">
-    <div class="container container-narrow">
-        <span class="badge badge-blue" style="margin-bottom:1rem;">Insights</span>
-        <h1 style="font-size:2.5rem;margin-bottom:1rem;">Check Before Paying: Most Sourcing Problems Start Before You Send Money</h1>
-        <p style="font-size:1.15rem;color:var(--color-gray-600);margin-bottom:2.5rem;line-height:1.8;">A lot of people worry about quality after production. In reality, most problems start before the first payment. Here are the checks I run before trusting a supplier.</p>
-
-        <div class="article-body">
-
-            <p>Online, many suppliers look the same. Nice photos, low MOQ, fast replies. But once money is sent, things can start to shift — lead time changes, specs move, or the "factory" turns out to be a trading company with a good website.</p>
-
-            <p>Here are the six things I check before sending any payment:</p>
-
-            <div class="check-item">
-                <div class="check-num">1</div>
-                <div class="check-content">
-                    <h3>Is it actually a factory?</h3>
-                    <p>Many suppliers say they're manufacturers but can't show real production. A quick live video of machines running usually tells a lot. Real factories normally don't hesitate to show you the production floor. Trading companies often avoid it or send old clips. Ask for a video call — not pre-recorded footage — walking through the production line.</p>
+                    </div>
+                    <div class="mt-12 border-t section-line pt-8">
+                        <a href="/insights/" class="inline-flex rounded-full border border-slate-300 px-6 py-3 text-sm font-bold text-slate-900 transition hover:border-slate-400">Back to all insights</a>
+                    </div>
+                </article>
+                <aside class="sticky top-28 hidden rounded-[2rem] border section-line bg-[rgba(19,35,44,0.96)] p-7 text-white shadow-dossier lg:block">
+                    <p class="eyebrow text-[#9de7df]">Use this article for</p>
+                    <div class="mt-6 space-y-4 text-sm leading-7 text-slate-200">
+                        <p>Sharper supplier questions before payment.</p>
+                        <p>Understanding what can go wrong before a quote turns into production risk.</p>
+                        <p>Deciding whether to start with $39 verification or a full sourcing brief.</p>
+                    </div>
+                    <a href="../verification.html" class="cta-main mt-7 inline-flex w-full justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Start $39 verification</a>
+                    <a href="../start-project.html" class="mt-3 inline-flex w-full justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-white/40">Send sourcing brief</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t section-line bg-[rgba(255,255,255,0.72)]">
+        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-4">
+                    <img src="../brand-icon.svg?v=3" alt="China Partner Hub icon" class="h-12 w-12 rounded-2xl object-contain shadow-sm">
+                    <div>
+                        <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-950">China Partner Hub</p>
+                        <p class="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-teal-700">On-the-ground China sourcing partner</p>
+                    </div>
+                </div>
+                <p class="mt-5 max-w-sm text-sm leading-7 text-slate-600">Real sourcing advice from someone on the ground in China, written for you if you need practical supplier judgment.</p>
+            </div>
+            <div class="md:text-center">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Navigation</h3>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><a href="../about.html" class="transition hover:text-teal-700">About</a></li>
+                    <li><a href="../services.html" class="transition hover:text-teal-700">Services</a></li>
+                    <li><a href="../verified-suppliers.html" class="transition hover:text-teal-700">Verified Suppliers</a></li>
+                    <li><a href="../verification.html" class="transition hover:text-teal-700">Verification</a></li>
+                    <li><a href="/insights/" class="transition hover:text-teal-700">Insights</a></li>
+                    <li><a href="../contact.html" class="transition hover:text-teal-700">Contact</a></li>
+                </ul>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-sm font-extrabold uppercase tracking-[0.18em] text-slate-500">Contact</h3>
+                <div class="mt-5 space-y-4 text-sm text-slate-700 md:flex md:flex-col md:items-end">
+                    <a href="mailto:info@chinapartnerhub.com" class="transition hover:text-teal-700">info@chinapartnerhub.com</a>
+                    <a href="https://wa.me/8618005455057" target="_blank" rel="noopener noreferrer" class="transition hover:text-teal-700">+86 180 0545 5057</a>
+                    <p><a href="../privacy.html" class="transition hover:text-teal-700">Privacy</a> / <a href="../terms.html" class="transition hover:text-teal-700">Terms</a></p>
                 </div>
             </div>
-
-            <div class="check-item">
-                <div class="check-num">2</div>
-                <div class="check-content">
-                    <h3>Does their capacity match their promises?</h3>
-                    <p>Small orders often get delayed because factories prioritize bigger clients. I try to understand how many similar machines they run and whether this product is part of their regular production. If it's not their usual line, your order may always be "next in line" behind their core customers.</p>
-                </div>
-            </div>
-
-            <div class="check-item">
-                <div class="check-num">3</div>
-                <div class="check-content">
-                    <h3>Does the pricing give clues?</h3>
-                    <p>Factories usually calculate based on material and labor, so their numbers often look uneven — $1.37, $4.82, etc. Trading companies tend to give very clean round pricing: $1.50, $5.00. Not always a definitive signal, but it's something I pay attention to when combined with other factors.</p>
-                </div>
-            </div>
-
-            <div class="check-item">
-                <div class="check-num">4</div>
-                <div class="check-content">
-                    <h3>Sample vs batch consistency</h3>
-                    <p>Some suppliers send a great sample, then change components later to save cost on the production run. I always confirm key details before production: material thickness, component brands, finishing standards. Write them down. Vague answers at this stage are usually a warning sign — a good supplier can specify exactly what you're getting.</p>
-                </div>
-            </div>
-
-            <div class="check-item">
-                <div class="check-num">5</div>
-                <div class="check-content">
-                    <h3>Location mismatch</h3>
-                    <p>Sometimes the listing shows one city, but the actual factory is somewhere else entirely. That doesn't automatically mean a problem — many trading companies have legitimate satellite offices. But it often means you're dealing with a middle layer, and it can affect lead time, communication, and your ability to verify anything in person later.</p>
-                </div>
-            </div>
-
-            <div class="check-item">
-                <div class="check-num">6</div>
-                <div class="check-content">
-                    <h3>Business license cross-check</h3>
-                    <p>In China, company registration information is publicly searchable. You can check: Is the company actually registered as a manufacturer or a trading company? When was it established? Is the registered address a factory zone or a residential building? A company registered 6 months ago claiming 20 years of experience is a problem. A "factory" registered at a residential address is another.</p>
-                </div>
-            </div>
-
-            <h2>These checks are simple — but skipping them is where things go wrong</h2>
-
-            <p>None of these checks require deep expertise. Most of them can be done before you send a single dollar. Even just confirming the company name, location, and production setup early on can filter out a large portion of risky suppliers.</p>
-
-            <p>The pattern I see over and over: a buyer finds a supplier online, the photos look good, the price is attractive, the salesperson is friendly — and they send payment without verifying anything. And then the problems start.</p>
-
-            <p>If you're considering a supplier right now, run through these six checks first. If something doesn't add up, don't ignore it just because the price is good. The money you save on a cheaper quote won't mean much if the goods never arrive — or arrive wrong.</p>
-
-            <div style="background:var(--color-primary-soft);border-radius:var(--radius-xl);padding:1.5rem;margin-top:2rem;text-align:center;">
-                <p style="margin-bottom:0.75rem;color:var(--color-gray-800);"><strong>Don't want to do these checks yourself?</strong> We'll verify a supplier for you — $30, credited as $50 if you order through us.</p>
-                <a href="../verification.html" class="btn btn-primary">Verify a Supplier — $30 <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
         </div>
-
-        <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-gray-200);">
-            <a href="index.html" style="color:var(--color-primary);font-weight:600;"><i class="fa-solid fa-arrow-left"></i> Back to all insights</a>
-        </div>
-    </div>
-</article>
-
-<footer style="background:var(--color-navy);color:#D1D5DB;padding:3rem 0 2rem;">
-    <div class="container">
-        <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2rem;margin-bottom:2rem;">
-            <div><img src="../logo.png" alt="ChinaPartnerHub" style="height:24px;margin-bottom:0.75rem;filter:brightness(10);"><p style="font-size:0.85rem;opacity:0.8;">Your China sourcing partner. We find, verify, and deliver.</p></div>
-            <div><h4 style="color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">Quick Links</h4><ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;font-size:0.85rem;"><li><a href="../how-it-works.html" style="opacity:0.8;">How It Works</a></li><li><a href="../services.html" style="opacity:0.8;">Services & Pricing</a></li><li><a href="../contact.html" style="opacity:0.8;">Contact</a></li></ul></div>
-            <div><h4 style="color:white;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;">Contact</h4><div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.85rem;"><a href="mailto:info@chinapartnerhub.com" style="opacity:0.8;"><i class="fa-regular fa-envelope" style="color:#059669;margin-right:0.5rem;"></i>info@chinapartnerhub.com</a><a href="https://wa.me/8618660006236" target="_blank" style="opacity:0.8;"><i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:0.5rem;"></i>+86 18660006236</a></div></div>
-        </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;display:flex;justify-content:space-between;font-size:0.75rem;flex-wrap:wrap;gap:0.75rem;"><p style="opacity:0.6;">&copy; 2026 ChinaPartnerHub. All rights reserved.</p><div style="display:flex;gap:1rem;"><a href="../privacy.html" style="opacity:0.6;">Privacy Policy</a><a href="../terms.html" style="opacity:0.6;">Terms of Service</a></div></div>
-    </div>
-</footer>
-
-<a href="https://wa.me/8618660006236" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<button class="scroll-top" id="scrollTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-<script>
-const navToggle=document.getElementById('navToggle'),mobileMenu=document.getElementById('mobileMenu'),body=document.body;
-navToggle.addEventListener('click',()=>{navToggle.classList.toggle('active');mobileMenu.classList.toggle('active');body.style.overflow=mobileMenu.classList.contains('active')?'hidden':''});
-mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{navToggle.classList.remove('active');mobileMenu.classList.remove('active');body.style.overflow=''}));
-const s=document.getElementById('scrollTop');window.addEventListener('scroll',()=>s.classList.toggle('visible',window.scrollY>600));s.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-</script>
+    </footer>
+<script src="../site-ui.js" data-base="../"></script>
 </body>
 </html>
