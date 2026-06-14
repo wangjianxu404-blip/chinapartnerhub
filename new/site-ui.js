@@ -5,6 +5,54 @@
     var emailAddress = "info@chinapartnerhub.com";
     var whatsappLink = "https://wa.me/8618005455057";
 
+    function sendAnalyticsEvent(eventName, params) {
+        if (typeof window.gtag !== "function") {
+            return;
+        }
+
+        window.gtag("event", eventName, params || {});
+    }
+
+    function normalizeLabel(value, fallback) {
+        var text = (value || "").replace(/\s+/g, " ").trim();
+        return text || fallback;
+    }
+
+    function trackCommercialClick(link) {
+        if (!link || link.dataset.analyticsTracked === "true") {
+            return;
+        }
+
+        var href = link.getAttribute("href") || "";
+        var text = normalizeLabel(link.textContent, "unknown");
+        var eventName = "";
+
+        if (/wa\.me\//i.test(href)) {
+            eventName = "contact_whatsapp_click";
+        } else if (/^mailto:/i.test(href)) {
+            eventName = "contact_email_click";
+        } else if (/start-project\.html(?:$|[?#])/i.test(href)) {
+            eventName = "start_project_click";
+        }
+
+        if (!eventName) {
+            return;
+        }
+
+        link.dataset.analyticsTracked = "true";
+        link.addEventListener("click", function () {
+            sendAnalyticsEvent(eventName, {
+                link_text: text,
+                link_url: href,
+                page_path: window.location.pathname
+            });
+        });
+    }
+
+    function attachCommercialClickTracking() {
+        document.querySelectorAll("a[href]").forEach(trackCommercialClick);
+    }
+
     function injectStyles() {
         if (document.getElementById("site-ui-styles")) {
             return;
@@ -169,5 +217,6 @@
         buildMobileNav();
         addFloatingWhatsApp();
         labelFooterContact();
+        attachCommercialClickTracking();
     });
 })();
