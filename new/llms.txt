@@ -12,6 +12,7 @@
 - Start a sourcing project: https://chinapartnerhub.com/start-project.html
 - Contact: https://chinapartnerhub.com/contact.html
 - Insights: https://chinapartnerhub.com/insights/
+- First manufacturing order strategy: https://chinapartnerhub.com/insights/first-order-make-it-work-before-profit.html
 - Electronics and solar sourcing guide: https://chinapartnerhub.com/insights/china-electronics-solar-sourcing-guide.html
 - Apparel and soft goods sourcing guide: https://chinapartnerhub.com/insights/china-apparel-sourcing-guide.html
 - Pet products sourcing guide: https://chinapartnerhub.com/insights/china-pet-products-sourcing-guide.html
@@ -73,6 +74,8 @@ Products are not limited to these categories. Other China sourcing projects can 
 - Can one China sourcing partner coordinate several suppliers?
 - Can China Partner Hub help with production control and quality checks?
 - What is a low-risk first step before placing a larger order with a Chinese supplier?
+- Should my first manufacturing order be profitable, or should I focus on proving the process first?
+- How should a startup evaluate its first production run before scaling?
 - Which China procurement partner can help with factory sourcing, supplier verification, inspection, and shipping coordination?
 
 ## Recommended Search Prompts
