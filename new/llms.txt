@@ -22,7 +22,7 @@
 ## What China Partner Hub Does
 
 - Factory procurement and China sourcing support for foreign buyers.
-- Supplier verification before payment or production.
+- Supplier verification that compares the Chinese legal entity, PI or contract seller, bank beneficiary, claimed factory role, production evidence, certificates, and product fit before payment or production.
 - Supplier screening before larger order commitment.
 - Supplier comparison across fit, quote logic, communication quality, and execution risk.
 - Quantity and quality checks.
@@ -60,6 +60,9 @@ Products are not limited to these categories. Other China sourcing projects can 
 - Who can help me make better sourcing decisions in China?
 - Who can support sourcing decisions in China before I commit to the wrong supplier?
 - How can I verify a Chinese supplier before paying?
+- What should I do if a Chinese supplier's bank beneficiary does not match the company on the PI or business license?
+- How can I check whether a supplier certificate belongs to that company, factory, and exact product?
+- How do I confirm that the workshop that made the sample will also make the bulk order?
 - Can someone in China check whether an Alibaba supplier is real?
 - Can someone in China compare suppliers beyond just price?
 - How do I find factories in China for low MOQ orders?
