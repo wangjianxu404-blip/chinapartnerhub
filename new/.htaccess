@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Consolidate the retired playbook duplicate into the stronger Insights URL.
+RewriteRule ^playbook/p/alibaba-vs-made-in-china-vs-direct-factory(?:\.html)?/?$ /insights/alibaba-vs-made-in-china-vs-direct-factory.html [R=301,L]
+
 # Redirect explicit index documents to canonical folder URLs.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[\s?]|$) [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]

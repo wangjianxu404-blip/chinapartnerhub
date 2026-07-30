@@ -151,9 +151,15 @@
     </url>
     <url>
         <loc>https://chinapartnerhub.com/playbook/</loc>
-        <lastmod>2026-07-16</lastmod>
+        <lastmod>2026-07-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/playbook/p/1688-sample-order-before-larger-export-order.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chinapartnerhub.com/playbook/p/alibaba-supplier-legitimate-before-wiring-money.html</loc>
@@ -174,8 +180,8 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://chinapartnerhub.com/playbook/p/alibaba-vs-made-in-china-vs-direct-factory.html</loc>
-        <lastmod>2026-06-16</lastmod>
+        <loc>https://chinapartnerhub.com/playbook/p/chinese-supplier-ddp-shipping-what-should-i-confirm.html</loc>
+        <lastmod>2026-07-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -294,6 +300,12 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://chinapartnerhub.com/playbook/p/two-supplier-loss-cases-before-scaling-1688-order.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://chinapartnerhub.com/playbook/p/verification-vs-evaluation-order.html</loc>
         <lastmod>2026-06-21</lastmod>
         <changefreq>monthly</changefreq>
@@ -314,6 +326,60 @@
     <url>
         <loc>https://chinapartnerhub.com/playbook/p/what-should-i-check-before-a-shipment-leaves-the-factory.html</loc>
         <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/playbook/p/what-supplier-invoice-do-i-need-from-china-for-amazon-fba.html</loc>
+        <lastmod>2026-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/research-peptide-scams-gray-market.html</loc>
+        <lastmod>2026-07-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/alibaba-vs-1688-for-international-buyers.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/why-supplier-certificates-are-not-proof-of-a-real-factory.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/safest-way-to-pay-a-chinese-supplier.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/how-much-deposit-to-pay-a-chinese-supplier.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/do-i-need-a-contract-with-a-chinese-supplier.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/products-from-china-do-not-match-sample-or-order.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://chinapartnerhub.com/insights/how-to-file-an-alibaba-trade-assurance-dispute.html</loc>
+        <lastmod>2026-07-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
