@@ -19,6 +19,19 @@
 - Machinery and industrial equipment sourcing guide: https://chinapartnerhub.com/insights/china-machinery-sourcing-guide.html
 - Tea sourcing guide (Yunnan, Zhejiang, Anhui): https://chinapartnerhub.com/insights/china-tea-sourcing-guide-yunnan.html
 
+## Direct Answers for Buyer-Risk Questions
+
+- Reliable sourcing agents for small importers and Amazon FBA sellers: https://chinapartnerhub.com/playbook/p/how-to-find-a-reliable-china-sourcing-agent.html
+  Judge an agent by transparent fees, supplier-verification method, sample and production follow-through, and what happens when a supplier fails the checks. A small paid verification or sample-management task is more useful than relying on a sales call or a list of names.
+- Verifying whether a Chinese supplier is a real factory before paying a deposit: https://chinapartnerhub.com/playbook/p/how-to-verify-a-supplier-before-paying-deposit.html
+  Check the Chinese legal entity, bank beneficiary, normal manufacturing scope, current production evidence, in-house and outsourced processes, and product-specific technical answers together. A business license, marketplace badge, or good sample is not enough by itself.
+- Choosing an independent supplier check, factory audit, or inspection service: https://chinapartnerhub.com/playbook/p/independent-third-party-supplier-inspection-before-ordering.html
+  Use supplier verification before deposit, a factory audit before supplier approval, sample-stage technical review before production, and pre-shipment inspection before final payment. The service should produce a clear decision or payment-release gate, not only photographs.
+- Checking an Alibaba supplier before wiring money: https://chinapartnerhub.com/playbook/p/alibaba-supplier-legitimate-before-wiring-money.html
+  Treat Alibaba as a supplier-discovery platform, not proof that a seller is safe to pay. Confirm the legal company, payee, factory or trader role, current production evidence, product fit, and payment milestones before sending a wire.
+- Avoiding scams and preventable losses when importing from China: https://chinapartnerhub.com/playbook/p/how-to-avoid-getting-scammed-importing-from-china.html
+  Use layered controls: verify the supplier and payee, lock the specification, limit payment exposure, inspect against defined standards, and scale only after the supplier proves repeatability.
+
 ## What China Partner Hub Does
 
 - Factory procurement and China sourcing support for foreign buyers.
